@@ -8,36 +8,80 @@
 }
 
 body {
-    /* لون خلفية الصفحة لعرض الفوتر بشكل واضح */
-   background-color: #f4f0eb;
+     background-color: #f4f0eb; /* لون الخلفية الكريمي المائل للأبيض */   
 }
-
 
 :root {
-    --bg-color: #293322;        /* اللون الأخضر الزيتوني الداكن */
-    --text-color: #a4a89d;      /* لون النصوص الرمادي الفاتح */
-    --white-color: #ffffff;     /* اللون الأبيض للعناوين */
-    --primary-color: #df5825;   /* اللون البرتقالي للأيقونات */
-    --border-color: rgba(255, 255, 255, 0.1); /* لون الخطوط الفاصلة */
+    /* =========================================
+       1. Colors (الألوان)
+       ========================================= */
+    
+    /* الألوان الأساسية (Primary Colors) */
+    --pz-primary: #e85d22;           /* البرتقالي الأساسي (اللوجو، الأزرار، التميزات) */
+    --pz-primary-hover: #d14a16;     /* برتقالي داكن (للهوفر - Hover) */
+    --pz-secondary: #ffb700;         /* أصفر/ذهبي (لأيقونات التقييم والنجوم) */
+    
+    /* ألوان الخلفيات (Background Colors) */
+    --pz-bg-body: #f4f0eb;           /* الكريمي/الأوف وايت (خلفية الموقع الرئيسية) */
+    --pz-bg-footer: #272F16;         /* الزيتي/الأخضر الداكن (خلفية الفوتر) */
+    --pz-bg-white: #ffffff;          /* أبيض نقي (لخلفيات الكروت والقوائم) */
+    
+    /* ألوان النصوص (Text Colors) */
+    --pz-text-heading: #111111;      /* أسود داكن (للعناوين H1, H2, H3) */
+    --pz-text-body: #555555;         /* رمادي داكن (للنصوص العادية والفقرات) */
+    --pz-text-footer: #a4a89d;       /* رمادي فاتح (لنصوص وروابط الفوتر) */
+    --pz-text-white: #ffffff;        /* أبيض (للنصوص داخل الأزرار البرتقالية) */
+    
+    /* ألوان الحدود والفواصل (Border Colors) */
+    --pz-border-light: rgba(0, 0, 0, 0.08);   
+    --pz-border-dark: rgba(255, 255, 255, 0.1);
+
+    /* =========================================
+       2. Typography (الخطوط)
+       ========================================= */
+    --pz-font-primary: 'Nunito', sans-serif;
+    --pz-font-accent: 'Pacifico', cursive; /* للكلمات مثل "Fresh Woodfired Pizza" */
+
+    /* أوزان الخطوط (Font Weights) */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+    --fw-black: 900;
+
+    /* =========================================
+       3. Transitions & Shadows (الانتقالات والظلال)
+       ========================================= */
+    
+    /* الانتقالات الناعمة (Transitions) */
+    --transition-fast: all 0.2s ease-in-out;
+    --transition-normal: all 0.3s ease-in-out;
+    --transition-slow: all 0.5s ease-in-out;
+
+    /* منحنى الحركة (Bezier Curves) لجعل الحركات طبيعية ومرنة مثل Elementor */
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* ظلال العناصر (Box Shadows) */
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); /* ظل برتقالي للأزرار */
 }
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
-/* section navbar  */
+hr
+{
+    opacity: 0.1;
+}
 /* إعدادات عامة */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-}
-
-body {
-    background-color: #f4f0eb; /* لون الخلفية الكريمي المائل للأبيض */
-}
-
+/* //
+// */
+/* section navbar  */
 /* حاوية الهيدر والنافبار */
 .header {
     background-color: #f4f0eb;
@@ -179,21 +223,15 @@ body {
     transition: 0.3s;
 }
 
-/* =========================================
-   التجاوب مع الشاشات (Responsive Design) 
-   ========================================= */
 
-@media (max-width: 992px) {
-    
-}
 
 
 /* section footer  */
 
 
 .footer {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--pz-bg-footer);
+    color: var(--pz-text-footer);                     /*  لوعايز تستدعي اي حاجه ف الروت الي فوق تكتبي var(--اسم الحاجه) */
     padding: 60px 0 20px;
 }
 
@@ -214,12 +252,7 @@ body {
     gap: 10px;
 }
 
-.footer-logo h2 {
-    color: var(--white-color);
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
+
 
 .social-icons {
     display: flex;
@@ -232,8 +265,8 @@ body {
     align-items: center;
     width: 36px;
     height: 36px;
-    background-color: var(--primary-color);
-    color: var(--white-color);
+    background-color: var(--pz-primary-hover);
+    color: var(--pz-text-white);
     text-decoration: none;
     border-radius: 50%;
     font-size: 16px;
@@ -241,8 +274,8 @@ body {
 }
 
 .social-icons a:hover {
-    background-color:var(--white-color);
-    color: var(--bg-color);
+    background-color:var(--pz-bg-white);
+    color: var(--pz-text-heading);
 }
 
 
@@ -253,8 +286,8 @@ body {
     padding: 50px 0;
 }
 
-.footer-col h3 {
-    color: var(--white-color);
+.footer-col h2 {
+    color: var(--pz-text-white);
     font-size: 20px;
     margin-bottom: 25px;
     font-weight: 700;
@@ -276,7 +309,8 @@ body {
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: var(--pz-text-white);
 }
 
 
@@ -316,7 +350,7 @@ body {
 }
 
 .footer-bottom a:hover {
-    color: var(--primary-color);
+    color: var(--pz-secondary);
 }
 
 .divider {
@@ -338,7 +372,9 @@ body {
         gap: 15px;
     }
 }
-
+/*     
+          اي حاجه هتعرض ف تابلت
+*/
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -397,11 +433,8 @@ body {
     .footer-middle {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-
-@media (max-width: 768px) {
-    .footer-top {
+     .footer-top {
         flex-direction: column;
         gap: 25px;
         text-align: center;
@@ -415,7 +448,10 @@ body {
 }
 
 
-@media (max-width: 480px) {
+
+
+
+@media (max-width: 480px) {      /* للموبايل  */
     .footer-middle {
         grid-template-columns: 1fr;
         text-align: center;
