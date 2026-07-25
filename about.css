@@ -1,0 +1,969 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f7f5f0;
+    color: #333;
+}
+
+/* 1. الشريط الأسود العلوي */
+.envato-top-bar {
+    background-color: #222222;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 40px;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.envato-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+}
+
+.envato-logo {
+    font-weight: 700;
+    color: #82b440;
+    font-size: 16px;
+}
+
+.buy-now-btn {
+    background-color: #82b440;
+    color: white;
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13.5px;
+    transition: 0.2s;
+}
+
+.buy-now-btn:hover {
+    background-color: #6d9c33;
+}
+
+
+.first-page-wrapper {
+    background-color: #f7f5f0;
+    background-image: radial-gradient(#d3cec5 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+    min-height: 100vh; 
+    height: auto;      /* تخلي الارتفاع يتحدد حسب المحتوى جواها بس */
+    padding-top: 55px;
+    padding-bottom: 50px; /* ضفنا مساحة مريحة تحت */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* النافبار */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 2%;
+    background-color: transparent;
+    
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pizza-circle-icon {
+    width: 34px;
+    height: 34px;
+    background-color: #ffffff;
+    border: 1.5px solid #e0533d;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pizza-slice {
+    position: absolute;
+    background-color: #e0533d;
+    border-radius: 50%;
+}
+.pizza-slice.s1 { width: 8px; height: 8px; top: 5px; left: 12px; }
+.pizza-slice.s2 { width: 6px; height: 6px; bottom: 6px; left: 8px; }
+.pizza-slice.s3 { width: 6px; height: 6px; bottom: 7px; right: 7px; }
+
+.logo-name {
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #1a1a1a;
+    font-size: 21px;
+}
+
+.nav-menu-area {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links-list {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.nav-links-list li a {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-links-list li a:hover,
+.nav-links-list li a.active-link {
+    color: #e0533d;
+}
+
+.arrow-down {
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+.red-pizza-btn {
+    background-color: #e0533d;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    transition: background-color 0.2s;
+}
+
+.red-pizza-btn:hover {
+    background-color: #c73f2a;
+}
+
+/* قسم About Us الأول */
+.about-hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 6%;
+    margin-top: 110px;
+}
+
+.about-text-content {
+    max-width: 600px;
+}
+
+.about-text-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.about-text-content p {
+    color: #666;
+    font-size: 15.5px;
+    line-height: 1.75;
+}
+
+.right-breadcrumb {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
+
+.right-breadcrumb a {
+    text-decoration: none;
+    color: #e0533d;
+}
+
+.right-breadcrumb span {
+    color: #777;
+    margin-left: 3px;
+}
+
+
+.passion-daily-section {
+    min-height: 100vh;
+    padding: 90px 6% 30px 6%;
+    background-color: #f7f5f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.passion-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+/* الجزء الأيسر والصورة والكارد العائم */
+.passion-left {
+    flex: 1;
+    position: relative;
+    min-height: 380px;
+}
+
+.passion-images-box {
+    width: 100%;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease;
+}
+
+
+
+.floating-ingredient-card {
+    position: absolute;
+    bottom: -22px;
+    left: 25px;
+    background: #ffffff;
+    padding: 18px 22px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 320px;
+}
+
+.ingredient-icon-box {
+    width: 45px;
+    height: 45px;
+    background-color: #fdf3f0;
+    border: 2px solid #e0533d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pizza-slice-sm {
+    width: 22px;
+    height: 22px;
+    background-color: #e0533d;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+.ingredient-text h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.ingredient-text p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* الجزء الأيمن والنصوص */
+.passion-right {
+    flex: 1;
+}
+
+.passion-right h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.passion-right p {
+    font-size: 14.5px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.discover-btn {
+    display: inline-block;
+    background-color: #e0533d;
+    color: #ffffff;
+    padding: 13px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.discover-btn:hover {
+    background-color: #c73f2a;
+}
+
+/* اللوجوهات السفلية */
+.brands-footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    padding-bottom: 30px;
+opacity: 0.75;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+}
+
+.brand-shape-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.shape-badge-1 {
+    width: 36px;
+    height: 24px;
+    border: 2px solid #666;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding: 0 4px;
+}
+.shape-badge-1 span {
+    display: block;
+    height: 2px;
+    background-color: #666;
+    width: 100%;
+}
+
+.shape-badge-2 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.shape-badge-2 span {
+    width: 8px;
+    height: 8px;
+    background-color: #666;
+    border-radius: 50%;
+}
+.shape-badge-2 span:nth-child(2) {
+    width: 12px;
+    height: 12px;
+}
+
+.shape-badge-3 {
+    width: 26px;
+    height: 26px;
+    border: 2px dashed #666;
+    border-radius: 50%;
+}
+
+.shape-badge-4 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.shape-badge-4 .sq { width: 10px; height: 10px; background: #666; }
+.shape-badge-4 .rect { width: 16px; height: 10px; background: #666; border-radius: 2px; }
+
+.shape-badge-5 {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #666;
+    transform: rotate(45deg);
+}
+/* خط فاصل أنيق بين الصفحة الأولى والصفحة الثانية */
+.page-divider-line {
+    width: 88%;
+    height: 1px;
+    background-color: #e2ded6; /* لون خفيف وهادئ متناسق مع التصميم */
+    margin: 0 auto;
+}
+.journey-section{
+    width:90%;
+    max-width:1400px;
+    margin:30px auto;
+}
+
+.journey-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:80px;
+    margin-bottom:70px;
+}
+
+.left-text h2{
+    font-size:60px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.story{
+    color:#c75b39;
+    font-size:18px;
+}
+
+.right-text{
+    max-width:430px;
+    font-size:20px;
+    line-height:1.9;
+    color:#666;
+}
+
+.journey-images{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.journey-card{
+    opacity:0;
+    transform:translateY(80px);
+    transition:1s;
+}
+
+.journey-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.journey-card img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:28px;
+}
+
+.year{
+    display:inline-block;
+    margin-top:-25px;
+    margin-left:20px;
+    background:#fff;
+    padding:10px 22px;
+    border-radius:14px;
+    font-weight:bold;
+    color:#d45b34;
+    position:relative;
+}
+
+.journey-card h3{
+    margin-top:25px;
+    font-size:34px;
+}
+
+.journey-card p{
+    margin-top:15px;
+    color:#666;
+    line-height:1.8;
+    font-size:18px;
+}
+.journey-header h2 {
+    font-size: 45px; 
+}
+
+.our-values-section {
+    background-color: #f9f8f6;
+    padding: 100px 20px;
+     /* مسافة فاصلة عن الصفحة اللي فوقها */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* توسيط العنوان والنص في نص الصفحة تماماً */
+.our-values-section .section-header {
+    text-align: center !important;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.our-values-section .sub-title {
+    color: #c84b31;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.our-values-section h2 {
+    font-size: 38px;
+    color: #2b3a2f;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.our-values-section p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* --- هنا السر: تداخل الكروت وطول صورة البيتزا --- */
+.values-grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.left-col {
+    position: relative;
+    left: -50px; /* بتزق الكروت يمين عشان تدخل جوه الصورة */
+    z-index: 3;
+}
+
+.right-col {
+    position: relative;
+    right: -50px; /* بتزق الكروت شمال عشان تدخل جوه الصورة */
+    z-index: 3;
+}
+/* تصميم الكارد الأبيض */
+.value-card {
+    
+    padding: 22px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.value-card .text-content h3 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.value-card .text-content p {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+    text-align: left;
+}
+
+.icon-box {
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c84b31;
+    font-size: 24px;
+}
+
+/* --- صورة البيتزا المركزية (طويلة وممتدة) --- */
+.center-image-container {
+    flex: 0 0 400px;
+    text-align: center;
+    z-index: 1;/* لتكون في الخلف والكروت فوق أطرافها */
+   
+}
+
+.center-image-container img {
+    width: 400px;
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+/* الحاوية الرئيسية */
+/* الحاوية الرئيسية لقسم القيم والصورة */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1250px;
+    margin: 80px auto;
+     
+}
+
+/* تنسيق أعمدة الكروت */
+.values-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+/* تداخل العمود الأيسر نحو اليمين ليدخل في أطراف الصورة */
+.left-column {
+    margin-right: -45px;
+    align-items: flex-end;
+}
+
+/* تداخل العمود الأيمن نحو اليسار ليدخل في أطراف الصورة */
+.right-column {
+    margin-left: -45px;
+    align-items: flex-start;
+}
+
+/* صندوق الصورة في المنتصف بطول مناسب */
+.center-image-container {
+    flex: 0 0 380px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.center-image-container img {
+    width: 100%;
+    height: 580px; /* طول الصورة عشان تكون متناسقة مع الكروت */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+/* تصميم الكارت الموحد والثابت */
+.value-card {
+    background: #ffffff;
+    padding: 22px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 390px; /* توحيد عرض كل الكروت تماماً */
+}
+
+.value-card h3 {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.value-card p {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+    text-align: left;
+}
+
+.icon-box {
+    color: #c84b31;
+    font-size: 24px;
+    min-width: 45px;
+    text-align: center;
+}
+/* تنسيق القسم العام وخلفية الموقع المطلوبة */
+.chefs-section {
+    background-color: #fbf9f5; /* لون خلفية الموقع الهادئة */
+    padding: 80px 20px 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chefs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* تنسيق الجزء العلوي (العنوان والوصف بجانب بعض) */
+.chefs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chefs-subtitle {
+    color: #c9513e;
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chefs-title {
+    font-size: 36px;
+    color: #1a1a1a;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.chefs-description {
+    max-width: 420px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* شبكة كروت الشيفات (3 أعمدة متساوية) */
+.chefs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+/* تنسيق كارت الشيف الواحد */
+.chef-card {
+    background: transparent;
+}
+
+/* صندوق الصورة والشارة الحمراء اللي عليها */
+.chef-img-box {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 340px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.chef-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.chef-card:hover .chef-img-box img {
+    transform: scale(1.04);
+}
+
+/* اللصقة الحمراء الخاصة بالمسمى الوظيفي أسفل الصورة من اليمين */
+.chef-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #c9513e;
+    color: white;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* اسم الشيف والنصوص تحته */
+.chef-name {
+    font-size: 22px;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.chef-bio {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* تنسيق الأيقونات الحمراء لوسائل التواصل الاجتماعي */
+.chef-social {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #c9513e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    background-color: #b04433;
+    transform: translateY(-2px);
+}
+/* تصميم الفوتر العام ليملى الشاشة وبنفس درجة لون الموقع */
+.pizzaro-footer {
+    background-color: #1d2613; /* درجة اللون الأخضر الزيتي المطابقة للصورة */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px 5% 30px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* صف الشعار والأيقونات فوق */
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 36px;
+    height: 36px;
+    background-color: #d9534f; /* لون دوائر السوشيال ميديا الأحمر البرتقالي */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.social-btn:hover {
+    opacity: 0.85;
+}
+
+/* الخط الفاصل الرقيق */
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 15px 0;
+}
+
+/* توزيع الأعمدة الأربعة */
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+/* عمود التواصل الأخير */
+.contact-col {
+    flex: 1.5;
+}
+
+.contact-text {
+    font-size: 13px;
+    color: #d0d0d0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* الصف السفلي (الحقوق وسياسة الاستخدام) */
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #b0b0b0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: #ffffff;
+}
