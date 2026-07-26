@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaro Footer</title>
+    <!-- استدعاء خطوط FontAwesome للأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/menu.css">
+</head>
+
+<body>
+    <!-- Start Section navbar  -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- اللوجو -->
+            <div class="logo">
+
+                <img src="assets/imgs/Logo.png" alt="logo-header">
+
+            </div>
+
+            <!-- زر القائمة للموبايل -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- روابط التنقل -->
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Menu</a></li>
+                <!-- قائمة منسدلة -->
+                <li class="dropdown">
+                    <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Our Chef</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">404</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+                <!-- الزر داخل القائمة في وضع الموبايل -->
+                <li class="mobile-only"><a href="#" class="btn-pizza">GET YOUR PIZZA</a></li>
+            </ul>
+
+            <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
+            <a href="#" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+
+            <div class="cart-box">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</div>
+<button id="darkMode">
+    🌙
+</button>
+        </nav>
+    </header>
+<div id="popup">
+    <button id="prev-img">&#10094;</button>
+
+    <img id="popup-img">
+
+    <button id="next-img">&#10095;</button>
+</div>
+
+
+
+
+
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Fresh & Delicious <span>Pizza</span></h1>
+
+            <p>
+                Enjoy the authentic taste of Italian pizza made with fresh
+                ingredients, premium cheese, and baked to perfection.
+                Every slice is prepared with love to give you an unforgettable
+                dining experience.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="order-btn">Order Now</button>
+                <button class="menu-btn">View Menu</button>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="https://iili.io/CeMhr0b.jpg" alt="Pizza">
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <section class="about">
+
+        <div class="about-text">
+
+            <span>About Us</span>
+
+            <h2>We Serve The Best Pizza In Town</h2>
+
+            <p>
+                At Pizza House, we prepare every pizza with fresh ingredients,
+                premium mozzarella cheese, homemade tomato sauce, and authentic
+                Italian recipes. Our mission is to deliver unforgettable flavors
+                and a dining experience you'll always remember.
+            </p>
+
+            <button>Learn More</button>
+
+        </div>
+
+
+        <div class="about-image">
+
+            <img src="https://iili.io/CeMXMcx.jpg" alt="">
+
+            <div class="experience">
+
+                <h3>10+</h3>
+                <p>Years Of Experience</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature-box">
+                <i class="fa-solid fa-pizza-slice"></i>
+                <h4>Fresh Pizza</h4>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <h4>Best Chefs</h4>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h4>Fast Delivery</h4>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-star"></i>
+                <h4>Premium Quality</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="popular-dishes">
+
+        <h2 class="section-title">Popular Pizza</h2>
+
+        <div class="slider">
+
+            <!-- السهم الشمال -->
+            <button class="arrow left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- مكان عرض الكروت -->
+            <div class="slider-container">
+
+                <div class="slider-track">
+
+                    <!-- Card 1 -->
+                    <div class="dish-card">
+                        <img src="https://iili.io/CeElFMN.jpg" alt="CexY4fe.jpg" alt="">
+                        <div class="dish-info">
+                            <h3>Margherita Pizza</h3>
+                            <p>Fresh mozzarella with tomato sauce.</p>
+
+                            <div class="bottom">
+                                <span class="price">$12.99</span>
+                                <button class="add-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="dish-card">
+                        <img src="https://iili.io/CeE05zv.jpg" alt="CexY4fe.jpg" alt="">
+                        <div class="dish-info">
+                            <h3>Pepperoni Pizza</h3>
+                            <p>Loaded with pepperoni and cheese.</p>
+
+                            <div class="bottom">
+                                <span class="price">$14.99</span>
+                                <button class="add-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="dish-card">
+                        <img src="https://iili.io/CeE0er7.jpg" alt="CexY4fe.jpg" alt="">
+                        <div class="dish-info">
+                            <h3>BBQ Chicken</h3>
+                            <p>Grilled chicken with BBQ sauce.</p>
+
+                            <div class="bottom">
+                                <span class="price">$15.99</span>
+                                <button class="add-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="dish-card">
+                        <img src="https://iili.io/CeE0bpa.jpg" alt="CexY4fe.jpg" alt="">
+                        <div class="dish-info">
+                            <h3>Veggie Pizza</h3>
+                            <p>Fresh vegetables with mozzarella.</p>
+
+                            <div class="bottom">
+                                <span class="price">$13.99</span>
+                                <button class="add-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="dish-card">
+                        <img src="https://iili.io/CeEEqKB.jpg" alt="CexY4fe.jpg" alt="">
+                        <div class="dish-info">
+                            <h3>Meat Lovers</h3>
+                            <p>Beef, sausage and pepperoni.</p>
+
+                            <div class="bottom">
+                                <span class="price">$18.99</span>
+                                <button class="add-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="dish-card">
+                        <img src="https://iili.io/CeEEgiQ.jpg" alt="CexY4fe.jpg" alt="">
+                        <div class="dish-info">
+                            <h3>Cheese Pizza</h3>
+                            <p>Classic cheese pizza.</p>
+
+                            <div class="bottom">
+                                <span class="price">$10.99</span>
+                                <button class="add-btn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- السهم اليمين -->
+            <button class="arrow right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="menu">
+
+        <h2>Our Menu</h2>
+
+        <div class="menu-container">
+
+            <div class="menu-card">
+                <img src="https://iili.io/CeMThSj.jpg" alt="">
+                <h3>Hawaiian Pizza</h3>
+                <p>Ham, pineapple, mozzarella cheese.</p>
+                <span>$9.99</span>
+               <div>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Order Now
+                </button>
+            </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://iili.io/CeMRiRj.jpg" alt="">
+                <h3>Supreme Pizza </h3>
+                <p>Pepperoni, sausage, onions, mushrooms, bell peppers, olives</p>
+
+                <span>$4.99</span>
+              <div>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Order Now
+                </button>
+            </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://iili.io/CeMGRXs.jpg" alt="">
+                <h3>Quattro Formaggi</h3>
+                <p>Mozzarella, Parmesan, Gorgonzola, Cheddar.</p>
+                <span>$8.99</span>
+             <div>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Order Now
+                </button>
+            </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://iili.io/CeMlmfp.jpg" alt="">
+                <h3>Seafood Pizza</h3>
+                <p>Shrimp, calamari, mozzarella, garlic sauce.</p>
+                <span>$6.99</span>
+             <div>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Order Now
+                </button>
+            </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://iili.io/CeMENRt.jpg" alt="">
+                <h3>Mushroom Pizza</h3>
+                <p>Fresh mushrooms, mozzarella, herbs.</p>
+                <span>$12.99</span>
+              <div>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Order Now
+                </button>
+            </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://iili.io/CeMX3aR.jpg" alt="">
+                <h3>Buffalo Chicken Pizza</h3>
+                <p>Spicy buffalo chicken, mozzarella, ranch dressing.</p>
+                <span>$22.99</span>
+                <div>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Order Now
+                </button>
+            </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="pizza-section">
+
+        <div class="pizza-content">
+            <h2>Quattro Formaggi Pizza</h2>
+
+            <p>
+                Experience the rich flavor of four premium cheeses including mozzarella,
+                parmesan, cheddar, and gorgonzola. Baked to perfection on a crispy crust,
+                this Italian classic is the ultimate choice for every cheese lover.
+            </p>
+
+            <button>Order Now</button>
+
+        </div>
+
+        <div class="pizza-image">
+            <img src="https://iili.io/CeMRiRj.jpg" alt="Pizza">
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class="pizza-section reverse">
+
+        <div class="pizza-image">
+            <img src="https://iili.io/CeVncaR.jpg" alt="Pizza">
+        </div>
+
+        <div class="pizza-content">
+            <h2>Hawaiian Pizza</h2>
+
+            <p>
+                A perfect blend of sweet pineapple, smoked ham, and melted mozzarella
+                cheese. Every bite offers a delicious balance of sweet and savory flavors,
+                creating a unique pizza experience.
+            </p>
+
+            <button>Explore Menu</button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <section class="pizza-section">
+
+        <div class="pizza-content">
+
+            <h2>Supreme Pizza</h2>
+
+            <p>
+                Loaded with pepperoni, beef, mushrooms, onions, bell peppers, olives,
+                and extra mozzarella cheese. Every slice is packed with rich flavors
+                and fresh ingredients for the perfect feast.
+            </p>
+
+            <button>View Menu</button>
+
+        </div>
+
+        <div class="pizza-image">
+            <img src="https://iili.io/CeVz9vR.jpg" alt="Pizza">
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <section class="pizza-section reverse">
+
+        <div class="pizza-image">
+            <img src="https://iili.io/CeVAXbR.jpg" alt="Pizza">
+        </div>
+
+        <div class="pizza-content">
+            <h2>Buffalo Chicken Pizza</h2>
+
+            <p>
+                Tender grilled chicken tossed in spicy buffalo sauce, topped with creamy
+                mozzarella and fresh herbs. A bold and flavorful pizza made for those
+                who enjoy a little extra heat in every bite.
+            </p>
+
+            <button>Order Now</button>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Start Section footer  -->
+    <footer class="footer">
+        <div class="container">
+
+            <!-- القسم العلوي (اللوجو وأيقونات التواصل) -->
+            <div class="footer-top">
+                <div class="footer-logo">
+
+                    <img src="assets/imgs/Logo-1.png" alt="logo-footer">
+
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr>
+            <!-- القسم الأوسط (الروابط) -->
+            <div class="footer-middle">
+                <!-- العمود الأول -->
+                <div class="footer-col">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Room</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثاني -->
+                <div class="footer-col">
+                    <h2>Menu</h2>
+                    <ul>
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Pasta</a></li>
+                        <li><a href="#">Sides</a></li>
+                        <li><a href="#">Beverages</a></li>
+                        <li><a href="#">Desserts</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثالث -->
+                <div class="footer-col">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="#">Dine-In</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Takeaway</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Bulk Orders</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الرابع -->
+                <div class="footer-col contact-col">
+                    <h2>Contact Us</h2>
+                    <p class="contact-desc">Feel free to call us in working hours Mon - fri {8:00 - 16.00}. Our team
+                        will be happy to help answer your queries</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> +1 (333) 000-0000</p>
+                    <p class="contact-info"><i class="far fa-envelope"></i> info@pizzarorestaurant.com</p>
+                </div>
+            </div>
+
+            <!-- القسم السفلي (حقوق النشر والروابط القانونية) -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    Copyright &copy; 2025 Pizzaro <span class="divider">|</span> Design by Tokotema
+                </div>
+                <div class="legal-links">
+                    <a href="#">Term of use</a> <span class="divider">|</span>
+                    <a href="#">Privacy Policy</a> <span class="divider">|</span>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="assets/JS/menu.js"></script>
+</body>
+
+</html>
