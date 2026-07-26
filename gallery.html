@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaro - Our Delicious Menu</title>
+    <link rel="stylesheet" href="assets/CSS/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/gallery.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+     <nav class="header">
+        <nav class="navbar">
+            <!-- اللوجو -->
+            <div class="logo">
+         
+                    <img src="assets/imgs/Logo.png" alt="logo-header">
+               
+            </div>
+
+            <!-- زر القائمة للموبايل -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- روابط التنقل -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Menu</a></li>
+                <!-- قائمة منسدلة -->
+                <li class="dropdown">
+                    <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Delivery.html">Delivery</a></li>
+                        <li><a href="Our chef.html">Our Chef</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="helper-center.html">Help Center</a></li>
+                       <li><a href="our-story.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact us.html">Contact Us</a></li>
+                <!-- الزر داخل القائمة في وضع الموبايل -->
+                <li class="mobile-only"><a href="#" class="btn-pizza">GET YOUR PIZZA</a></li>
+            </ul>
+
+            <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
+            <a href="#menu-section" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+        </nav>
+    </nav>
+
+    <section class="hanging-hero">
+        <!-- الهيدر -->
+       
+
+        <!-- التاج الترويجي العلوي -->
+        <div class="top-badge animate-fade-down">
+            <span>🍕 Fresh Woodfired Pizza</span>
+        </div>
+
+        <!-- العنوان الرئيسي -->
+        <div class="hero-title-box animate-fade-up">
+            <h1>TASTE THE BEST <span class="highlight">PIZZA</span><br>CRAFTED WITH LOVE</h1>
+            <p>Made with premium ingredients, fresh mozzarella, and baked in a traditional wood-fired oven.</p>
+            <button class="main-cta">Explore Full Menu</button>
+        </div>
+
+        <!-- حاوية الحبل والصور -->
+        <div class="string-container">
+            <!-- خط الحبل أصبح في المنتصف ليمر فوق أطراف الصور والمشابك مباشرة -->
+            <div class="rope-line"></div>
+
+            <div class="polaroid-cards-wrapper">
+                <div class="polaroid-card swing-slow" style="--rotation: -7deg; transform: rotate(-7deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300" alt="Margherita">
+                    <div class="card-desc">
+                        <h3>Margherita</h3>
+                        <p>Fresh basil & cheese</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-fast" style="--rotation: -5deg; transform: rotate(-5deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300" alt="Pepperoni">
+                    <div class="card-desc">
+                        <h3>Pepperoni Classic</h3>
+                        <p>Spicy beef pepperoni</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-slow" style="--rotation: -3deg; transform: rotate(-3deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300" alt="Woodfired">
+                    <div class="card-desc">
+                        <h3>Woodfired Special</h3>
+                        <p>Chef's secret recipe</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-fast" style="--rotation: -1deg; transform: rotate(-1deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=300" alt="Vegetarian">
+                    <div class="card-desc">
+                        <h3>Garden Veggie</h3>
+                        <p>Fresh organic veggies</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-slow" style="--rotation: 1deg; transform: rotate(1deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=300" alt="Four Cheese">
+                    <div class="card-desc">
+                        <h3>Four Cheese</h3>
+                        <p>Rich melted cheese</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-fast" style="--rotation: 3deg; transform: rotate(3deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=300" alt="BBQ Chicken">
+                    <div class="card-desc">
+                        <h3>BBQ Chicken</h3>
+                        <p>Smoky grilled chicken</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-slow" style="--rotation: 5deg; transform: rotate(5deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?w=300" alt="Mushroom">
+                    <div class="card-desc">
+                        <h3>Mushroom Truffle</h3>
+                        <p>Wild mushrooms</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-fast" style="--rotation: 7deg; transform: rotate(7deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=300" alt="Seafood">
+                    <div class="card-desc">
+                        <h3>Spicy Seafood</h3>
+                        <p>Shrimp & garlic</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-slow" style="--rotation: 8deg; transform: rotate(8deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300" alt="Italiana">
+                    <div class="card-desc">
+                        <h3>Italiana Supreme</h3>
+                        <p>Olives & herbs</p>
+                    </div>
+                </div>
+
+                <div class="polaroid-card swing-fast" style="--rotation: 9deg; transform: rotate(9deg);">
+                    <div class="clip"></div>
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=300" alt="Calzone">
+                    <div class="card-desc">
+                        <h3>Classic Calzone</h3>
+                        <p>Folded baked pizza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container">
+            
+            <!-- القسم العلوي (اللوجو وأيقونات التواصل) -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                  
+                    <img src="assets/imgs/Logo-1.png" alt="logo-footer">
+                   
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr>
+            <!-- القسم الأوسط (الروابط) -->
+            <div class="footer-middle">
+                <!-- العمود الأول -->
+                <div class="footer-col">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Room</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثاني -->
+                <div class="footer-col">
+                    <h2>Menu</h2>
+                    <ul>
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Pasta</a></li>
+                        <li><a href="#">Sides</a></li>
+                        <li><a href="#">Beverages</a></li>
+                        <li><a href="#">Desserts</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثالث -->
+                <div class="footer-col">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="#">Dine-In</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Takeaway</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Bulk Orders</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الرابع -->
+                <div class="footer-col contact-col">
+                    <h2>Contact Us</h2>
+                    <p class="contact-desc">Feel free to call us in working hours Mon - fri {8:00 - 16.00}. Our team will be happy to help answer your queries</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> +1 (333) 000-0000</p>
+                    <p class="contact-info"><i class="far fa-envelope"></i> info@pizzarorestaurant.com</p>
+                </div>
+            </div>
+
+            <!-- القسم السفلي (حقوق النشر والروابط القانونية) -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    Copyright &copy; 2025 Pizzaro <span class="divider">|</span> Design by Tokotema
+                </div>
+                <div class="legal-links">
+                    <a href="#">Term of use</a> <span class="divider">|</span>
+                    <a href="#">Privacy Policy</a> <span class="divider">|</span>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

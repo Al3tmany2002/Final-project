@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaro </title>
+    <!-- استدعاء خطوط FontAwesome للأيقونات -->
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/Delivery.css">
+     <link rel="stylesheet" href="assets/CSS/contact us.css">
+</head>
+<body>
+    <!-- Start Section navbar  -->
+    <nav class="header">
+        <nav class="navbar">
+            <!-- اللوجو -->
+            <div class="logo">
+         
+                    <img src="assets/imgs/Logo.png" alt="logo-header">
+               
+            </div>
+
+            <!-- زر القائمة للموبايل -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- روابط التنقل -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Menu</a></li>
+                <!-- قائمة منسدلة -->
+                <li class="dropdown">
+                    <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Delivery.html">Delivery</a></li>
+                        <li><a href="#">Our Chef</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="helper-center.html">Help Center</a></li>
+                     <li><a href="our-story.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact us.html">Contact Us</a></li>
+                <!-- الزر داخل القائمة في وضع الموبايل -->
+                <li class="mobile-only"><a href="#" class="btn-pizza">GET YOUR PIZZA</a></li>
+            </ul>
+
+            <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
+             <a href="Delivery.html" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+        </nav>
+    </nav>
+     <section class="page-header hidden-section">
+        <div class="container-header">
+            
+            <!-- القسم الأيسر: العنوان والنص -->
+            <div class="header-content">
+                <h1>Contact Us</h1>
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
+            </div>
+
+            <!-- القسم الأيمن: مسار التنقل (Breadcrumb) -->
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a>
+                <span class="separator">/</span>
+                <span class="current">Contact Us</span>
+            </div>
+
+        </div>
+    </section>
+    <section class="delivery-section hidden-section">
+        <div class="container-delivery">
+            
+            <!-- القسم الأيسر: النصوص والصورة -->
+            <div class="content-side">
+                <span class="subtitle">Popular Picks</span>
+                <h2>Hot Fresh Pizza<br>Delivered To You</h2>
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
+                <!-- يمكنك استبدال الرابط أدناه بمسار صورة الشيف الحقيقية -->
+                <img src="assets/imgs/contact-img/image-42.jpg" alt="Chef smiling" class="chef-img">
+            </div>
+
+            <!-- القسم الأيمن: نموذج الطلب -->
+            <div class="form-side">
+                <form class="pizza-form">
+                    
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Delivery Address</label>
+                        <input type="text" placeholder="Enter your full address">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Order Details</label>
+                        <input type="text" placeholder="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Delivery Time</label>
+                        <input type="time" placeholder="--:-- --">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Notes</label>
+                        <textarea rows="6" placeholder="Add instructions for delivery"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn full-width">GET YOUR PIZZA</button>
+
+                </form>
+            </div>
+
+        </div>
+        </section>
+
+        <!-- car section  -->
+
+            <div class="container header-container car">
+            
+            <button id="cartBtn" class="cart-btn">
+                🛒 Car<span id="cartCount" class="badge">0</span>
+            </button>
+                </div>
+
+                <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Car</h2>
+            <button id="closeCart" class="close-btn">✖</button>
+        </div>
+        
+        <div id="cartItems" class="cart-items">
+            <p class="empty-msg">Car is Empty</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total">
+                <span>total:</span>
+                <span id="cartTotal">LE 0</span>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn" onclick="checkout()">Check Out</button>
+        </div>
+                </div>
+
+                <!-- text-box Message -->
+            <div id="toastBox" class="toast-box"></div>
+            <!-- end section car  -->
+      <!-- Start Section footer  -->
+    <footer class="footer hidden-section">
+        <div class="container">
+            
+            <!-- القسم العلوي (اللوجو وأيقونات التواصل) -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                  
+                    <img src="assets/imgs/Logo-1.png" alt="logo-footer">
+                   
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr>
+            <!-- القسم الأوسط (الروابط) -->
+            <div class="footer-middle">
+                <!-- العمود الأول -->
+                <div class="footer-col">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Room</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثاني -->
+                <div class="footer-col">
+                    <h2>Menu</h2>
+                    <ul>
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Pasta</a></li>
+                        <li><a href="#">Sides</a></li>
+                        <li><a href="#">Beverages</a></li>
+                        <li><a href="#">Desserts</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثالث -->
+                <div class="footer-col">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="#">Dine-In</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Takeaway</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Bulk Orders</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الرابع -->
+                <div class="footer-col contact-col">
+                    <h2>Contact Us</h2>
+                    <p class="contact-desc">Feel free to call us in working hours Mon - fri {8:00 - 16.00}. Our team will be happy to help answer your queries</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> +1 (333) 000-0000</p>
+                    <p class="contact-info"><i class="far fa-envelope"></i> info@pizzarorestaurant.com</p>
+                </div>
+            </div>
+
+            <!-- القسم السفلي (حقوق النشر والروابط القانونية) -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    Copyright &copy; 2025 Pizzaro <span class="divider">|</span> Design by Tokotema
+                </div>
+                <div class="legal-links">
+                    <a href="#">Term of use</a> <span class="divider">|</span>
+                    <a href="#">Privacy Policy</a> <span class="divider">|</span>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="assets/JS/main.js"></script>
+</body>
+</html>

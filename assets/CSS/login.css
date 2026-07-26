@@ -1,0 +1,263 @@
+/* =========================================
+   Modern & Premium Login Page Redesign
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fcf9f5;
+}
+
+.login-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #fdfbf7;
+}
+
+/* اللوحة اليسرى - تصميم غامر وفخم للصورة */
+.left-panel {
+    width: 45%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url('../imgs/login-img/pizzzza.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-panel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(230, 92, 36, 0.15), rgba(0, 0, 0, 0.35));
+    mix-blend-mode: overlay;
+}
+
+.brand-logo {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    z-index: 10;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px 22px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* اللوحة اليمنى - نموذج نظيف ومرتب */
+.right-panel {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+    background: #ffffff;
+}
+
+/* نمط نقاط خلفية هادئ وراقي */
+.bg-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.035;
+    background-image: radial-gradient(#e65c24 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 440px;
+    z-index: 5;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f2eee9;
+}
+
+.login-box h2 {
+    font-size: 2.3rem;
+    color: #111;
+    margin-bottom: 30px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* حقول الإدخال بتصميم ناعم وعصري */
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: #faf8f5;
+    border: 2px solid #ede8e1;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    color: #222;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group input:focus {
+    background-color: #fff;
+    border-color: #e65c24;
+    box-shadow: 0 0 0 4px rgba(230, 92, 36, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot-password a {
+    color: #e65c24;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.forgot-password a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* زر تسجيل الدخول بتدرج لوني جذاب */
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #ff6b35 0%, #e65c24 100%);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 20px rgba(230, 92, 36, 0.3);
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(230, 92, 36, 0.4);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* فاصل أنيق */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eae5db;
+}
+
+.divider span {
+    padding: 0 15px;
+    color: #888;
+    font-weight: 500;
+}
+
+/* أزرار السوشيال ميديا بتصميم مرتب */
+.social-login {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 2px solid #eae5db;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    background-color: #faf8f5;
+    border-color: #d5cbbd;
+    transform: translateY(-1px);
+}
+
+/* رابط التسجيل بالأسفل */
+.signup-prompt {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.signup-prompt a {
+    color: #e65c24;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .left-panel {
+        width: 100%;
+        height: 240px;
+    }
+    .right-panel {
+        padding: 20px;
+    }
+    .login-box {
+        box-shadow: none;
+        border: none;
+        padding: 20px;
+    }
+}

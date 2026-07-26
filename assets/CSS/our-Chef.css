@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+     background-color: #f4f0eb; /* لون الخلفية الكريمي المائل للأبيض */   
+}
+
+:root {
+    /* =========================================
+       1. Colors (الألوان)
+       ========================================= */
+    
+    /* الألوان الأساسية (Primary Colors) */
+    --pz-primary: #e85d22;           /* البرتقالي الأساسي (اللوجو، الأزرار، التميزات) */
+    --pz-primary-hover: #d14a16;     /* برتقالي داكن (للهوفر - Hover) */
+    --pz-secondary: #ffb700;         /* أصفر/ذهبي (لأيقونات التقييم والنجوم) */
+    
+    /* ألوان الخلفيات (Background Colors) */
+    --pz-bg-body: #f4f0eb;           /* الكريمي/الأوف وايت (خلفية الموقع الرئيسية) */
+    --pz-bg-footer: #272F16;         /* الزيتي/الأخضر الداكن (خلفية الفوتر) */
+    --pz-bg-white: #ffffff;          /* أبيض نقي (لخلفيات الكروت والقوائم) */
+    
+    /* ألوان النصوص (Text Colors) */
+    --pz-text-heading: #111111;      /* أسود داكن (للعناوين H1, H2, H3) */
+    --pz-text-body: #555555;         /* رمادي داكن (للنصوص العادية والفقرات) */
+    --pz-text-footer: #a4a89d;       /* رمادي فاتح (لنصوص وروابط الفوتر) */
+    --pz-text-white: #ffffff;        /* أبيض (للنصوص داخل الأزرار البرتقالية) */
+    
+    /* ألوان الحدود والفواصل (Border Colors) */
+    --pz-border-light: rgba(0, 0, 0, 0.08);   
+    --pz-border-dark: rgba(255, 255, 255, 0.1);
+
+    /* =========================================
+       2. Typography (الخطوط)
+       ========================================= */
+    --pz-font-primary: 'Nunito', sans-serif;
+    --pz-font-accent: 'Pacifico', cursive; /* للكلمات مثل "Fresh Woodfired Pizza" */
+
+    /* أوزان الخطوط (Font Weights) */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+    --fw-black: 900;
+
+    /* =========================================
+       3. Transitions & Shadows (الانتقالات والظلال)
+       ========================================= */
+    
+    /* الانتقالات الناعمة (Transitions) */
+    --transition-fast: all 0.2s ease-in-out;
+    --transition-normal: all 0.3s ease-in-out;
+    --transition-slow: all 0.5s ease-in-out;
+
+    /* منحنى الحركة (Bezier Curves) لجعل الحركات طبيعية ومرنة مثل Elementor */
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* ظلال العناصر (Box Shadows) */
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); /* ظل برتقالي للأزرار */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+
+.our-chef
+{
+    background-color: white;
+    padding: 60px 0; 
+   
+}
+.card-chef
+{
+     display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+  
+
+}
+.card-chef div
+{
+   position: relative;
+}
+.card-chef img
+{
+    width: 100%;
+    border-radius: 15px ;
+
+}
+.card-chef div h3
+{
+    margin: 20px 0;
+    font-size: 2rem;
+    font-family: var(--pz-font-primary);
+    font-weight: var(--fw-regular);
+    color: var(--pz-text-heading);
+    line-height: 1.2em;
+}
+.card-chef div p
+{
+    color:#4B523D;
+    font-size: .875rem;
+    font-weight: 600;
+    font-family: var(--pz-font-primary);
+    line-height: 1.2em;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+.card-chef .icon-our-chef
+{
+    display: flex;
+    gap: 10px;
+     
+}
+.card-chef .icon-our-chef a
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--pz-primary-hover);
+    color: var(--pz-text-white);
+    text-decoration: none;
+    border-radius: 50%;
+   font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+.card-chef .icon-our-chef a:hover
+{
+    background-color: var(--pz-secondary);
+    color: black;
+}
+.our-chef .card-chef .span-1,
+.our-chef .card-chef .span-2,
+.our-chef .card-chef .span-3,
+.our-chef .card-chef .span-4,
+.our-chef .card-chef .span-5,
+.our-chef .card-chef .span-6
+{
+    padding: 10px;
+    background-color: var(--pz-bg-body);
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: var(--fw-regular);
+    color: #E03F02;
+    position: relative;
+     
+    
+}
+.our-chef .card-chef .span-1
+{
+    top: 360px;
+    left: 231px;
+
+}
+.our-chef .card-chef .span-2
+{
+     top: 360px;
+    left: 189px;
+}
+.our-chef .card-chef .span-3{
+    top: 360px;
+    left: 203px;
+}
+.our-chef .card-chef .span-4
+{
+    top: 360px;
+    left: 196px;
+}
+.our-chef .card-chef .span-5
+{
+    top: 360px;
+    left: 231px;
+
+}
+.our-chef .card-chef .span-6
+{
+   
+    top: 358px;
+    left: 146px;
+   
+    
+}
+
+
+
+
+
+@media (max-width: 810px)
+{
+    
+    .card-chef
+{
+     display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+
+}
+.our-chef .card-chef .span-1,
+.our-chef .card-chef .span-2,
+.our-chef .card-chef .span-3,
+.our-chef .card-chef .span-4,
+.our-chef .card-chef .span-5,
+.our-chef .card-chef .span-6
+{
+    padding: 10px;
+    background-color: var(--pz-bg-body);
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: var(--fw-regular);
+    color: #E03F02;
+    position: absolute;
+     
+    
+}
+.our-chef .card-chef .span-1
+{
+    top: 815px;
+    left: 630px;
+
+}
+.our-chef .card-chef .span-2
+{
+    top: 815px;
+    left: 595px;
+}
+.our-chef .card-chef .span-3{
+    top: 815px;
+    left: 605px;
+}
+.our-chef .card-chef .span-4
+{
+   top: 815px;
+    left: 600px;
+}
+.our-chef .card-chef .span-5
+{
+    top: 815px;
+    left: 630px;
+
+}
+.our-chef .card-chef .span-6
+{
+   
+   top: 815px;
+    left: 550px;
+   
+    
+}
+.card-chef .icon-our-chef
+{
+    display: flex;
+    gap: 10px;
+  justify-content: center;
+  align-items: center;   
+}
+}
+@media (max-width: 480px)
+{
+    .card-chef
+{
+     display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+}
+.our-chef .card-chef .span-1,
+.our-chef .card-chef .span-2,
+.our-chef .card-chef .span-3,
+.our-chef .card-chef .span-4,
+.our-chef .card-chef .span-5,
+.our-chef .card-chef .span-6
+{
+    padding: 10px;
+    background-color: var(--pz-bg-body);
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: var(--fw-regular);
+    color: #E03F02;
+    position: absolute;
+     
+    
+}
+.our-chef .card-chef .span-1
+{
+    top: 360px;
+    left: 231px;
+
+}
+.our-chef .card-chef .span-2
+{
+     top: 360px;
+    left: 185px;
+}
+.our-chef .card-chef .span-3{
+    top: 360px;
+    left: 200px;
+}
+.our-chef .card-chef .span-4
+{
+    top: 360px;
+    left: 190px;
+}
+.our-chef .card-chef .span-5
+{
+    top: 360px;
+    left: 221px;
+
+}
+.our-chef .card-chef .span-6
+{
+   
+    top: 358px;
+    left: 150px;
+   
+    
+}
+.our-chef .card-chef .span-6
+{
+   
+       top: 360px;
+        left: 140px;
+}
+.card-chef .icon-our-chef
+{
+    display: flex;
+    gap: 10px;
+  justify-content: center;
+  align-items: center;   
+}
+}
+

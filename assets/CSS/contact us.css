@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+     background-color: #f4f0eb; /* لون الخلفية الكريمي المائل للأبيض */   
+}
+
+:root {
+    /* =========================================
+       1. Colors (الألوان)
+       ========================================= */
+    
+    /* الألوان الأساسية (Primary Colors) */
+    --pz-primary: #e85d22;           /* البرتقالي الأساسي (اللوجو، الأزرار، التميزات) */
+    --pz-primary-hover: #d14a16;     /* برتقالي داكن (للهوفر - Hover) */
+    --pz-secondary: #ffb700;         /* أصفر/ذهبي (لأيقونات التقييم والنجوم) */
+    
+    /* ألوان الخلفيات (Background Colors) */
+    --pz-bg-body: #f4f0eb;           /* الكريمي/الأوف وايت (خلفية الموقع الرئيسية) */
+    --pz-bg-footer: #272F16;         /* الزيتي/الأخضر الداكن (خلفية الفوتر) */
+    --pz-bg-white: #ffffff;          /* أبيض نقي (لخلفيات الكروت والقوائم) */
+    
+    /* ألوان النصوص (Text Colors) */
+    --pz-text-heading: #111111;      /* أسود داكن (للعناوين H1, H2, H3) */
+    --pz-text-body: #555555;         /* رمادي داكن (للنصوص العادية والفقرات) */
+    --pz-text-footer: #a4a89d;       /* رمادي فاتح (لنصوص وروابط الفوتر) */
+    --pz-text-white: #ffffff;        /* أبيض (للنصوص داخل الأزرار البرتقالية) */
+    
+    /* ألوان الحدود والفواصل (Border Colors) */
+    --pz-border-light: rgba(0, 0, 0, 0.08);   
+    --pz-border-dark: rgba(255, 255, 255, 0.1);
+
+    /* =========================================
+       2. Typography (الخطوط)
+       ========================================= */
+    --pz-font-primary: 'Nunito', sans-serif;
+    --pz-font-accent: 'Pacifico', cursive; /* للكلمات مثل "Fresh Woodfired Pizza" */
+
+    /* أوزان الخطوط (Font Weights) */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+    --fw-black: 900;
+
+    /* =========================================
+       3. Transitions & Shadows (الانتقالات والظلال)
+       ========================================= */
+    
+    /* الانتقالات الناعمة (Transitions) */
+    --transition-fast: all 0.2s ease-in-out;
+    --transition-normal: all 0.3s ease-in-out;
+    --transition-slow: all 0.5s ease-in-out;
+
+    /* منحنى الحركة (Bezier Curves) لجعل الحركات طبيعية ومرنة مثل Elementor */
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* ظلال العناصر (Box Shadows) */
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); /* ظل برتقالي للأزرار */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+
+
+
+
+hr
+{
+    opacity: 0.1;
+}
+/* إعدادات عامة */
+
+
+
+.delivery-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+/* تقسيم الشاشة إلى عمودين */
+.container-delivery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px; /* المسافة بين النصوص والنموذج */
+    align-items: start;
+}
+
+/* =========================================
+   تنسيق القسم الأيسر (النصوص والصورة)
+   ========================================= */
+.content-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subtitle {
+    font-family: 'Pacifico', cursive; /* الخط المائل */
+    color: #df440f;
+    font-size: 18px;
+}
+
+.content-side h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #293322;
+    line-height: 1.2;
+}
+
+.content-side p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.chef-img {
+    width: 100%;
+    max-width: 320px; /* للتحكم في عرض الصورة */
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* =========================================
+   تنسيق القسم الأيمن (النموذج)
+   ========================================= */
+.form-side {
+    width: 100%;
+}
+
+.pizza-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 17px;
+    font-weight: 800;
+    color: #293322;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #df440f; 
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #df440f;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c93a0b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Media Query
+   ========================================= */
+
+
+@media (max-width: 992px) {
+   
+   .nav-links {
+        gap: 15px;
+    }
+    .container-delivery {
+        grid-template-columns: 1fr; /* وضع القسمين تحت بعض */
+        gap: 50px;
+    }
+     .chef-img {
+        max-width: 100%; /* جعل الصورة تأخذ العرض المتاح */
+    }
+  
+}
+/*     
+          اي حاجه هتعرض ف تابلت
+*/
+@media (max-width: 810px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 15px;
+    }
+
+    /* تحويل الروابط إلى قائمة عمودية مخفية تظهر بالضغط */
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        background-color: #f4f0eb;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        transition: 0.4s ease-in-out;
+    }
+
+    /* كلاس active الذي يتم إضافته بالجافاسكربت لإظهار القائمة */
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* تعديل القائمة المنسدلة في الموبايل */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        background-color: rgba(0,0,0,0.03);
+        text-align: center;
+    }
+
+    /* يمكنك استخدام الجافاسكريبت لفتحها، لكن هنا تظهر تلقائياً عند النقر لتبسيط الكود */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+       
+     .container-header {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-middle {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+     .footer-top {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {      /* للموبايل  */
+    .footer-middle {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .contact-info {
+        justify-content: center;
+    }
+}
+

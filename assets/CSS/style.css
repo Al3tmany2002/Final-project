@@ -448,6 +448,1356 @@ hr
 }
 
 
+/* =========================================
+  Home style
+   ========================================= */
+
+/* إعدادات عامة وتثبيت الألوان والخلفية */
+/* إعدادات عامة وتثبيت الألوان والخلفية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #222;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    position: relative;
+    background-color: #fff9f9;
+    background-image: url('assets/imgs/pizza-icon.png');
+    background-repeat: repeat;
+    background-size: 60px;
+    background-position: center;
+    background-blend-mode: overlay;
+    
+    padding: 50px 5% 0 5%;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* حاوية الـ Hero مقسمة لـ 3 أعمدة (نصوص، شيف، تقييم) */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* الجزء الأيسر: النصوص والزرار */
+.hero-content {
+    flex: 1;
+    max-width: 480px;
+    padding-top: 20px;
+    animation: fadeInRight 1s ease-out;
+}
+
+.hero-content .subtitle {
+    color: #e05638;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    color: #1a1a1a;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-pizza {
+    background-color: #e59842;
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 152, 66, 0.4);
+}
+
+.btn-pizza:hover {
+    background-color: #d28733;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(229, 152, 66, 0.6);
+}
+
+/* الجزء الأوسط: الشيف في النص تماماً */
+.chef-image {
+    flex: 1;
+    text-align: center;
+    z-index: 1;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.chef-image img {
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    mix-blend-mode: multiply;
+    position: relative;
+    margin-right: -40%;
+    margin-top: 30px;
+    margin-left: auto;
+    animation: floatChef 4s ease-in-out infinite;
+}
+/* الجزء الأيمن: التقييم */
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.rating-box {
+    text-align: right;
+    margin-bottom: 10px;
+    z-index: 3;
+}
+
+.rating-number {
+    font-size: 46px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.rating-star {
+    color: #e67e22;
+    font-size: 26px;
+    vertical-align: top;
+    animation: pulseStar 1.5s infinite;
+}
+
+.rating-text {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    font-weight: 500;
+}
+
+/* كارت البيتزا العائم (المودرن الغامق) */
+.pizza-card-float {
+    position: absolute;
+    right: 8%;
+    bottom: 100px;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 22px 25px;
+    border-radius: 18px;
+    width: 299px;
+    z-index: 5;
+    margin-top: -90px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    animation: floatCard 3.5s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.pizza-card-float:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.pizza-card-float h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pizza-card-float p {
+    font-size: 13px;
+    color: #b0b0b0;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.order-now {
+    background: none;
+    border: none;
+    color: #e59842;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.order-now:hover {
+    color: #f39c12;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+/* صورة البيتزا الكبيرة في الخلفية تحت */
+/* الحاوية ثابتة في المنتصف تماماً بين القسمين بدون أي حركة */
+/* الحاوية متمركزة في المنتصف تماماً بين القسمين */
+.hero-big-pizza {
+    position: absolute;
+    bottom: -330px; /* زيادة مسافة النزول للأسفل لتناسب الحجم الضخْم الجديد */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+    z-index: 99;
+}
+
+/* تكبير البيتزا لتصبح ضخمة وموزعة على القسمين مع استمرار الدوران */
+.hero-big-pizza img {
+    width: 650px;  /* حجم أكبر بكثير ومميز */
+    height: 650px; /* نفس الحفاظ على التناسق الدائري 100% */
+    max-width: none;
+    object-fit: cover;
+    border-radius: 50%;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    animation: rotatePizza 25s linear infinite; /* البيتزا وحدها تدور بحرية */
+}
+
+
+/* إعدادات القسم الرئيسي */
+.categories-section {
+    background-color: #2b3828;
+    padding: 60px 8%;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+
+/* رأس القسم (العنوان والزر) */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+.browse-btn {
+    background-color: #e65c24;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.browse-btn:hover {
+    background-color: #cf4f1f;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 92, 36, 0.4);
+}
+
+/* حاوية المحتوى الأساسية (توزيع شبكي أو مرن) */
+.categories-container {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* قائمة الفئات (اليسار) */
+.categories-list {
+    flex: 1.3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* بطاقة الفئة الفردية */
+.category-card {
+    background-color: #384734;
+    padding: 20px 25px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover, .category-card.active {
+    background-color: #42553e;
+    transform: translateX(8px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* أيقونة الفئة */
+.category-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-icon img {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* معلومات الفئة (النصوص) */
+.category-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.category-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.category-info p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #b0c2ac;
+}
+
+/* عدد العناصر (Items) */
+.item-count {
+    color: #f39c12;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* حاوية الصور في الجانب الأيمن */
+.category-images {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.image-box {
+    flex: 1;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.08);
+}
+
+/* التجاوب مع الشاشات الصغيرة (Responsive) */
+@media (max-width: 900px) {
+    .categories-container {
+        flex-direction: column;
+    }
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+
+
+/* إعدادات القسم الرئيسي */
+.favorites-section {
+    background-color: #fcf9f5;
+    padding: 80px 8%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* رأس القسم (العنوان والوصف) */
+.favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.header-title-box h2 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    line-height: 1.15;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-desc-box {
+    max-width: 380px;
+}
+
+.header-desc-box p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* شبكة المنتجات (Grid 3 أعمدة) */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* تصميم الكارد الواحد */
+.product-card {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+/* صورة المنتج */
+.product-image {
+    width: 100%;
+    height: 230px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+/* محتوى الكارد (العنوان، السعر، الوصف، الزر) */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.product-title-price h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin: 0;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e65c24;
+}
+
+.product-desc {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+/* زر الطلب (Order Now) */
+.order-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #ddd;
+    color: #1a1a1a;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.order-btn:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* التجاوب مع الشاشات الصغيرة (Responsive) */
+@media (max-width: 1024px) {
+    .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .favorites-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* إعدادات القسم الرئيسي بخلفية برتقالية مميزة */
+.delivery-section {
+    background-color: #e65c24;
+    padding: 80px 8%;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* تنسيق النصوص في أعلى القسم */
+.delivery-header {
+    margin-bottom: 50px;
+}
+
+.sub-heading {
+    display: inline-block;
+    color: #fff3e0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.delivery-header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+}
+
+.delivery-header p {
+    font-size: 0.95rem;
+    color: #fce4ec;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* شبكة المميزات (3 أعمدة متساوية) */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* تصميم البطاقة الواحدة */
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* أيقونة الميزة الدائرية */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotateY(360deg);
+}
+
+.feature-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* عنوان الميزة داخل البطاقة */
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* التجاوب مع الشاشات الصغيرة (Responsive) */
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .delivery-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* إعدادات القسم الرئيسي */
+.recommended-section {
+    background-color: #fcf9f5;
+    padding: 80px 5%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* رأس القسم */
+.recommended-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    color: #e65c24;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.header-titles h2 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-description {
+    max-width: 380px;
+}
+
+.header-description p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* حاوية المحتوى الكلي (تقسيم شبكي بين الأطباق والبانر) */
+.recommended-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* شبكة الأطباق الداخلية (3 أعمدة) */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* تصميم كارد الطبق الواحد */
+.dish-card {
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+}
+
+.dish-image {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.dish-card:hover .dish-image img {
+    transform: scale(1.08);
+}
+
+/* شارة السعر العلوية داخل صورة الطبق */
+.dish-price {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #ffffff;
+    color: #e65c24;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dish-name {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* تصميم البانر الترويجي الكبير */
+.promo-banner {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('promo-pizza.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.promo-banner:hover {
+    transform: scale(1.01);
+}
+
+.promo-tag {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.promo-banner h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 25px 0;
+}
+
+.promo-btn {
+    background-color: #e65c24;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.promo-btn:hover {
+    background-color: #cf4f1f;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(207, 79, 31, 0.4);
+}
+
+/* التجاوب مع الشاشات المختلفة */
+@media (max-width: 1200px) {
+    .recommended-container {
+        grid-template-columns: 1fr;
+    }
+    .promo-banner {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .recommended-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* إعدادات القسم الرئيسي */
+.why-choose-section {
+    background-color: #f6e6d2;
+    padding: 80px 8%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* الجانب الأيسر: الصور المتداخلة */
+.why-choose-images {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    min-height: 450px;
+}
+
+/* صورة الشيف الكبيرة */
+.chef-large-img {
+    width: 320px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.chef-large-img:hover {
+    transform: scale(1.03);
+}
+
+.chef-large-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* صورة البيتزا العائمة المتداخلة */
+.pizza-small-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    border: 6px solid #fcf9f5;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.pizza-small-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* الجانب الأيمن: النصوص والمميزات */
+.why-choose-content {
+    flex: 1.1;
+}
+
+.sub-title {
+    color: #e65c24;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.why-choose-content h2 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
+
+.section-desc {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* قائمة المميزات */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    transition: transform 0.3s ease;
+}
+
+.features-list li:hover {
+    transform: translateX(6px);
+}
+
+/* أيقونة الصح البرتقالية */
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #faece7;
+    color: #e65c24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+/* زر الاستكشاف (Discover More) */
+.discover-btn {
+    background-color: #e65c24;
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+    background-color: #cf4f1f;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(230, 92, 36, 0.4);
+}
+
+/* التجاوب مع الشاشات المختلفة (Responsive) */
+@media (max-width: 992px) {
+    .why-choose-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .why-choose-images {
+        width: 100%;
+        justify-content: center;
+        min-height: 400px;
+    }
+
+    .pizza-small-img {
+        right: 20%;
+        bottom: 0;
+    }
+
+    .features-list li {
+        justify-content: center;
+    }
+}
+/* --- إعدادات قسم آراء العملاء --- */
+.customer-voices-section {
+    background-color: #fcf9f5;
+    padding: 80px 8%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* رأس القسم (العنوان والوصف الجانبي) */
+.voices-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    color: #e65c24;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.header-titles h2 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-description {
+    max-width: 380px;
+}
+
+.header-description p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* شبكة البطاقات (3 أعمدة × صفين) */
+.voices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* تنسيق البطاقة الواحدة */
+.voice-card {
+    background-color: #f2ede4;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.voice-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* الجزء العلوي من البطاقة (أيقونة التنصيص، العنوان، والتقييم) */
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.quote-icon {
+    font-size: 2.2rem;
+    color: #e65c24;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 10px;
+}
+
+.card-top h3 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin: 0;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.rating {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.star {
+    color: #f4c430;
+    font-size: 1rem;
+}
+
+/* نص التقييم داخل البطاقة */
+.review-text {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* معلومات العميل (الصورة، الاسم، والمنطقة) */
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.customer-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc;
+    transition: transform 0.3s ease;
+}
+
+.voice-card:hover .customer-img {
+    transform: scale(1.1);
+}
+
+.customer-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.customer-info h4 {
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    margin: 0 0 3px 0;
+    font-weight: bold;
+}
+
+.customer-info span {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* --- التجاوب مع الشاشات المختلفة (Responsive) --- */
+@media (max-width: 1024px) {
+    .voices-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .voices-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .voices-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-titles h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* --- إعدادات قسم الواجهة الرئيسية (Hero Section) بكلاسات جديدة --- */
+.pizzaro-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-pizza-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    font-family: 'Arial', sans-serif;
+}
+
+.pizzaro-hero-content {
+    max-width: 800px;
+    color: #ffffff;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.pizzaro-hero-tag {
+    color: #f4c430;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pizzaro-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+}
+
+.pizzaro-hero-content p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0 0 35px 0;
+}
+
+.pizzaro-order-btn {
+    background-color: #f4c430;
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pizzaro-order-btn:hover {
+    background-color: #e0b020;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(244, 196, 48, 0.4);
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+    .pizzaro-hero-content h1 {
+        font-size: 2.3rem;
+    }
+    .pizzaro-hero-content p {
+        font-size: 0.9rem;
+    }
+    .pizzaro-order-btn {
+        padding: 12px 25px;
+        font-size: 0.85rem;
+    }
+}
+
+/* --- حركات الأنيميشن المضافة (Keyframes) --- */
+@keyframes floatChef {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes floatCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotatePizza {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseStar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
 
 
 

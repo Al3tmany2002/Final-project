@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+     background-color: #f4f0eb; /* لون الخلفية الكريمي المائل للأبيض */   
+}
+
+
+:root {
+    /* =========================================
+       1. Colors (الألوان)
+       ========================================= */
+    
+    /* الألوان الأساسية (Primary Colors) */
+    --pz-primary: #e85d22;           /* البرتقالي الأساسي (اللوجو، الأزرار، التميزات) */
+    --pz-primary-hover: #d14a16;     /* برتقالي داكن (للهوفر - Hover) */
+    --pz-secondary: #ffb700;         /* أصفر/ذهبي (لأيقونات التقييم والنجوم) */
+    
+    /* ألوان الخلفيات (Background Colors) */
+    --pz-bg-body: #f4f0eb;           /* الكريمي/الأوف وايت (خلفية الموقع الرئيسية) */
+    --pz-bg-footer: #272F16;         /* الزيتي/الأخضر الداكن (خلفية الفوتر) */
+    --pz-bg-white: #ffffff;          /* أبيض نقي (لخلفيات الكروت والقوائم) */
+    
+    /* ألوان النصوص (Text Colors) */
+    --pz-text-heading: #111111;      /* أسود داكن (للعناوين H1, H2, H3) */
+    --pz-text-body: #555555;         /* رمادي داكن (للنصوص العادية والفقرات) */
+    --pz-text-footer: #a4a89d;       /* رمادي فاتح (لنصوص وروابط الفوتر) */
+    --pz-text-white: #ffffff;        /* أبيض (للنصوص داخل الأزرار البرتقالية) */
+    
+    /* ألوان الحدود والفواصل (Border Colors) */
+    --pz-border-light: rgba(0, 0, 0, 0.08);   
+    --pz-border-dark: rgba(255, 255, 255, 0.1);
+
+    /* =========================================
+       2. Typography (الخطوط)
+       ========================================= */
+    --pz-font-primary: 'Nunito', sans-serif;
+    --pz-font-accent: 'Pacifico', cursive; /* للكلمات مثل "Fresh Woodfired Pizza" */
+
+    /* أوزان الخطوط (Font Weights) */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+    --fw-black: 900;
+
+    /* =========================================
+       3. Transitions & Shadows (الانتقالات والظلال)
+       ========================================= */
+    
+    /* الانتقالات الناعمة (Transitions) */
+    --transition-fast: all 0.2s ease-in-out;
+    --transition-normal: all 0.3s ease-in-out;
+    --transition-slow: all 0.5s ease-in-out;
+
+    /* منحنى الحركة (Bezier Curves) لجعل الحركات طبيعية ومرنة مثل Elementor */
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* ظلال العناصر (Box Shadows) */
+    --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); /* ظل برتقالي للأزرار */
+}
+
+
+
+
+.cart-btn {
+    background-color: #df440f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+    position: fixed;
+    top: 95%;
+    left: 30px;
+    z-index: 9;
+}
+.car .badge {
+    background-color: white;
+    color: #df440f;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px; /* مخفية خارج الشاشة من اليسار */
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s ease;
+}
+
+/* الكلاس الذي سيضيفه الجافاسكريبت لفتح العربة */
+.cart-sidebar.open {
+    left: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #df440f;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f4f0eb;
+}
+
+.remove-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #888;
+    margin-top: 50px;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #df440f;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.checkout-btn:hover { background-color: #c93a0b; }
+
+/* ================= صندوق الإشعارات (Toast) ================= */
+.toast-box {
+    position: fixed;
+    top: 50px; /* المسافة من أسفل الشاشة */
+    left: 30px;   /* المسافة من يسار الشاشة */
+    background-color: #293322; /* لون أخضر داكن يتماشى مع تصميمك */
+    color: #ffffff;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+    font-weight: 700;
+    z-index: 9999; /* لضمان ظهوره فوق أي عنصر آخر */
+    
+    /* الإخفاء الافتراضي والأنيميشن */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* الكلاس الذي سيضيفه الجافاسكريبت لإظهار الرسالة */
+.toast-box.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   تنسيق قسم رأس الصفحة (Page Header)
+   ========================================= */
+.page-header {
+    background-color: #f4f0eb; /* لون الخلفية الكريمي */
+    /* إضافة النقاط الباهتة في الخلفية باستخدام CSS Pattern */
+    background-image: radial-gradient(#d5d1cc 1px, transparent 1px);
+    background-size: 20px 20px; /* التحكم في المسافة بين النقاط */
+    padding: 100px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* تنسيق القسم الأيسر */
+.header-content {
+    max-width: 550px; /* لمنع النص من الامتداد لآخر الشاشة */
+}
+
+.header-content h1 {
+    font-size: 52px;
+    font-weight: 900;
+    color: #293322; /* اللون الأخضر الزيتوني الداكن */
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.header-content p {
+    color: #555555;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+/* =========================================
+   تنسيق مسار التنقل (Breadcrumb)
+   ========================================= */
+.breadcrumb {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.breadcrumb a {
+    color: #df440f; /* اللون البرتقالي */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #c93a0b;
+}
+
+.breadcrumb .separator {
+    color: #293322;
+    margin: 0 12px;
+    font-weight: 800;
+}
+
+.breadcrumb .current {
+    color: #293322; /* اللون الأخضر الزيتوني */
+}
+/* Breadcrumb end  */
+
+
+/* Menu section  */
+.filters-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background-color: #eae5dc;
+    color: #333;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #ddd6cc;
+}
+
+/* الزر النشط (البرتقالي) */
+.filter-btn.active {
+    background-color: #f15a24;
+    color: white;
+    box-shadow: 0 4px 15px rgba(241, 90, 36, 0.3);
+}
+
+/* --- تنسيق شبكة الكروت --- */
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* كلاس مساعد لإخفاء الكروت غير المطلوبة عبر الـ JS */
+.pizza-card.hide {
+    display: none;
+}
+
+.pizza-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    transition:var(--transition-slow);
+}
+.pizza-card:hover,
+.pizza-card:hover .card-image
+{
+    transform: scale(1.1);
+    
+}
+/* --- تنسيق الصور والبادجات --- */
+.card-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    z-index: 2;
+}
+
+.badge.bestseller { top: 10px; left: 10px; background-color: #f15a24; }
+.badge.veggie { top: 10px; left: 10px; background-color: #00a651; }
+.badge.spicy { top: 35px; left: 10px; background-color: #ed1c24; margin-top: 5px;}
+.badge.rating { top: 10px; right: 10px; background-color: rgba(0,0,0,0.7); }
+
+/* --- تنسيق المحتوى (النصوص والأسعار) --- */
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* لجعل الزر دائماً في الأسفل */
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-box .size {
+    font-size: 12px;
+    color: #999;
+}
+
+.price-box .price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #222;
+}
+
+.add-btn {
+    background-color: #f15a24;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #d94a1b;
+}
+/* End menu section  */
+
+
+/* Section Services  */
+.services-section {
+    background-color: #da4614; /* اللون البرتقالي الداكن للخلفية */
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.container-services {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   الرأس (العناوين والنصوص)
+   ========================================= */
+.section-header {
+    margin-bottom: 50px;
+}
+
+.subtitle-services {
+    font-family: 'Pacifico', cursive; /* الخط المائل اليدوي */
+    color: #f7c36a; /* لون برتقالي مصفر فاتح */
+    font-size: 20px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.section-header p, .section-footer p {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   تنسيق شبكة الكروت (Cards Grid)
+   ========================================= */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+   
+}
+
+.feature-card {
+    /* لون خلفية الكارت هو الأبيض مع نسبة شفافية ليعطي درجة أفتح من الخلفية */
+    background-color: rgba(255, 255, 255, 0.15); 
+    border-radius: 20px;
+    padding: 50px 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px); /* حركة خفيفة للأعلى عند الوقوف بالماوس */
+}
+
+/* تنسيق الدائرة البيضاء للأيقونة */
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px;
+    color: #da4614; /* لون الأيقونة برتقالي نفس لون الخلفية */
+    font-size: 45px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+/* End Section Services  */
+/* //
+//
+// */
+/* Section Enjoy  */
+.enjoy
+{
+    padding: 60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../imgs/delivery/image-20.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.enjoy .container div
+{
+    text-align: center;
+}
+.enjoy .container div h3
+{
+    margin: 20px 0;
+    font-family: var(--pz-font-primary);
+    font-size: 4rem;
+    color: var(--pz-text-white);
+    font-weight: var(--fw-regular);
+}
+.enjoy .container div p
+{
+    margin-bottom: 20px;
+    font-family: var(--pz-font-primary);
+    font-size: 1rem;
+    font-weight: var(--fw-semibold);
+    color: #EEEDE4;
+}
+.enjoy .container .btn-enjoy{
+    transition: all var(--transition-slow);
+    margin-bottom: 40px;
+}
+.enjoy .container .btn-enjoy:hover
+{
+    background-color: var(--pz-primary-hover);
+    border: 1px white solid;
+}
+
+/* End Section Enjoy  */
+/* //
+//
+// */
+/* =========================================
+   تنسيق الجزء السفلي (الزر)
+   ========================================= */
+.section-footer p {
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #f7bc74; /* اللون الرملي/البيج للزر */
+    color: #111111;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1px solid #111111; /* إطار أسود خفيف حول الزر */
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--pz-bg-white);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* =========================================
+   التجاوب مع الشاشات (Responsive)
+   ========================================= */
+@media (max-width: 992px) {
+    .container-delivery {
+        grid-template-columns: 1fr; /* وضع القسمين تحت بعض */
+        gap: 50px;
+    }
+    
+    .chef-img {
+        max-width: 100%; /* جعل الصورة تأخذ العرض المتاح */
+    }
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+    .section-header h2 {
+        font-size: 45px;
+    }
+}
+/* شاشات التابلت (أقل من 992px) */
+@media (max-width: 810px) {
+    .pizza-form {
+        grid-template-columns: 1fr; /* حقول النموذج تحت بعض */
+    }
+    
+    .full-width {
+        grid-column: span 1;
+    }
+    
+    .content-side h2 {
+        font-size: 32px;
+    }
+    .cart-btn{
+         position: fixed;
+    top: 10%;
+    z-index: 9;
+    }
+     .page-header {
+        padding: 60px 20px;
+    }
+
+    .container-header {
+        flex-direction: column; /* جعل العناصر تحت بعضها */
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+    }
+}
+    /* شاشات الموبايل */
+@media (max-width: 480px) {
+    .page-header {
+        padding: 60px 20px;
+    }
+
+    .container-header {
+        flex-direction: column; /* جعل العناصر تحت بعضها */
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+    }
+    
+  
+    .section-header h2 {
+        font-size: 36px;
+    }
+    .features-grid {
+        grid-template-columns: 1fr; /* جعل الكروت تحت بعضها في الموبايل */
+    }
+    .section-header h2 {
+        font-size: 36px;
+    }
+    .cart-btn{
+         position: fixed;
+    top: 15%;
+    z-index: 9;
+    }
+}
