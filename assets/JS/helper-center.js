@@ -19,3 +19,37 @@ accordionItems.forEach(item => {
         item.classList.toggle('active');
     });
 });
+
+
+// ================= Dark Mode =================
+
+const darkBtn = document.getElementById("darkMode");
+
+if (darkBtn) {
+
+    if (localStorage.getItem("theme") === "dark") {
+
+        document.body.classList.add("dark");
+        darkBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+    }
+
+    darkBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+
+            localStorage.setItem("theme", "dark");
+            darkBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+        } else {
+
+            localStorage.setItem("theme", "light");
+            darkBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+
+        }
+
+    });
+
+}
