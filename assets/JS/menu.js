@@ -44,6 +44,18 @@ prev.addEventListener("click", () => {
     }
 });
 
+
+
+
+
+document.getElementById("cart-box").addEventListener("click", function () {
+    window.location.href = "Delivery.html";
+});
+
+
+
+
+
 window.addEventListener("resize", updateSlider);
 
 updateSlider();
@@ -185,7 +197,3 @@ const darkBtn = document.getElementById("darkMode");
 darkBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark");
 });
-
-
-
-
