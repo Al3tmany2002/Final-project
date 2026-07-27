@@ -134,7 +134,7 @@ hr
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #e85d22; /* اللون البرتقالي */
+    color:  #d14a16;           /* البرتقالي الأساسي (اللوجو، الأزرار، التميزات) */
 }
 
 /* أيقونة السهم في القائمة */
@@ -183,7 +183,7 @@ hr
 }
 
 .dropdown-menu li a:hover {
-    color: #e85d22;
+    color: #d14a16;
     background-color: rgba(232, 93, 34, 0.05);
 }
 
@@ -308,6 +308,73 @@ color:white !important;
 
 
 
+/* قسم About Us الأول */
+.about-hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 6%;
+    margin-top: 110px;
+}
+
+.about-text-content {
+    max-width: 600px;
+}
+
+.about-text-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.about-text-content p {
+    color: #666;
+    font-size: 15.5px;
+    line-height: 1.75;
+}
+
+.right-breadcrumb {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
+
+.right-breadcrumb a {
+    text-decoration: none;
+    color: #e0533d;
+}
+
+.right-breadcrumb span {
+    color: #777;
+    margin-left: 3px;
+}
+
+
+.passion-daily-section {
+    min-height: 100vh;
+    padding: 90px 6% 30px 6%;
+    background-color: #f7f5f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.passion-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+
+
+
+
+
+
 .about{
     width:100%;
     padding:90px 8%;
@@ -323,7 +390,7 @@ color:white !important;
 }
 
 .about-text span{
-    color:#ff8a00;
+    color:#d14a16;
     font-weight:bold;
     font-size:20px;
 }
@@ -461,6 +528,7 @@ color:white !important;
     width:170px;
     height:50px;
     border:none;
+    
     border-radius:30px;
     background:#ff7a00;
     color:white;
@@ -476,6 +544,7 @@ color:white !important;
 .menu-btn{
     width:170px;
     height:50px;
+    margin-top: 20px;
     border:2px solid #ff7a00;
     border-radius:30px;
     background:transparent;
