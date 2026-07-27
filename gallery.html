@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaro - Our Delicious Menu</title>
     <link rel="stylesheet" href="assets/CSS/all.min.css">
-    <link rel="stylesheet" href="assets/CSS/gallery.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/menu.css">
+    <link rel="stylesheet" href="assets/CSS/Delivery.css">
+    <link rel="stylesheet" href="assets/CSS/gallery.css">
 </head>
 <body>
-     <nav class="header">
+    <!-- Start Section navbar -->
+    <header class="header">
         <nav class="navbar">
             <!-- اللوجو -->
             <div class="logo">
-         
-                    <img src="assets/imgs/Logo.png" alt="logo-header">
-               
+                <img src="assets/imgs/Logo.png" alt="logo-header">
             </div>
 
             <!-- زر القائمة للموبايل -->
@@ -27,9 +28,9 @@
 
             <!-- روابط التنقل -->
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
                 <!-- قائمة منسدلة -->
                 <li class="dropdown">
                     <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
@@ -37,25 +38,34 @@
                         <li><a href="Delivery.html">Delivery</a></li>
                         <li><a href="Our chef.html">Our Chef</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="event.html">Events</a></li>
                         <li><a href="helper-center.html">Help Center</a></li>
-                       <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
                     </ul>
                 </li>
                 <li><a href="contact us.html">Contact Us</a></li>
                 <!-- الزر داخل القائمة في وضع الموبايل -->
-                <li class="mobile-only"><a href="#" class="btn-pizza">GET YOUR PIZZA</a></li>
+                <li class="mobile-only"><a href="menu.html" class="btn-pizza">GET YOUR PIZZA</a></li>
             </ul>
 
             <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
-            <a href="#menu-section" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+            <a href="menu.html" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+
+            <div class="cart-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+            
         </nav>
-    </nav>
+    </header>
+
+    <div id="popup">
+        <button id="prev-img">&#10094;</button>
+        <img id="popup-img" alt="Popup Image">
+        <button id="next-img">&#10095;</button>
+    </div>
 
     <section class="hanging-hero">
-        <!-- الهيدر -->
-       
-
         <!-- التاج الترويجي العلوي -->
         <div class="top-badge animate-fade-down">
             <span>🍕 Fresh Woodfired Pizza</span>
@@ -65,7 +75,7 @@
         <div class="hero-title-box animate-fade-up">
             <h1>TASTE THE BEST <span class="highlight">PIZZA</span><br>CRAFTED WITH LOVE</h1>
             <p>Made with premium ingredients, fresh mozzarella, and baked in a traditional wood-fired oven.</p>
-            <button class="main-cta">Explore Full Menu</button>
+            <a href="menu.html" class="main-cta" style="text-decoration: none; display: inline-block; text-align: center;">Explore Full Menu</a>
         </div>
 
         <!-- حاوية الحبل والصور -->
@@ -165,17 +175,42 @@
                 </div>
             </div>
         </div>
-
     </section>
+        <!-- car section  -->
+
+            <div class="container header-container car">
+            
+            <button id="cartBtn" class="cart-btn">
+                🛒 Car<span id="cartCount" class="badge">0</span>
+            </button>
+                </div>
+
+                <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Car</h2>
+            <button id="closeCart" class="close-btn">✖</button>
+        </div>
+        
+        <div id="cartItems" class="cart-items">
+            <p class="empty-msg">Car is Empty</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total">
+                <span>total:</span>
+                <span id="cartTotal">LE 0</span>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn" onclick="checkout()">Check Out</button>
+        </div>
+                </div>
+            <!-- end section car  -->
+
     <footer class="footer">
         <div class="container">
-            
             <!-- القسم العلوي (اللوجو وأيقونات التواصل) -->
             <div class="footer-top">
                 <div class="footer-logo">
-                  
                     <img src="assets/imgs/Logo-1.png" alt="logo-footer">
-                   
                 </div>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -202,11 +237,11 @@
                 <div class="footer-col">
                     <h2>Menu</h2>
                     <ul>
-                        <li><a href="#">Pizza</a></li>
-                        <li><a href="#">Pasta</a></li>
-                        <li><a href="#">Sides</a></li>
-                        <li><a href="#">Beverages</a></li>
-                        <li><a href="#">Desserts</a></li>
+                        <li><a href="menu.html">Pizza</a></li>
+                        <li><a href="menu.html">Pasta</a></li>
+                        <li><a href="menu.html">Sides</a></li>
+                        <li><a href="menu.html">Beverages</a></li>
+                        <li><a href="menu.html">Desserts</a></li>
                     </ul>
                 </div>
                 <!-- العمود الثالث -->
@@ -240,10 +275,10 @@
                     <a href="#">Cookie Policy</a>
                 </div>
             </div>
-
         </div>
     </footer>
 
     <script src="gallery.js"></script>
+    <script src="assets/JS/delivery.js"></script>
 </body>
 </html>

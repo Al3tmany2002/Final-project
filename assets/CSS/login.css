@@ -25,7 +25,7 @@ body, html {
     background: #fdfbf7;
 }
 
-/* اللوحة اليسرى - تصميم غامر وفخم للصورة */
+
 .left-panel {
     width: 45%;
     height: 100%;
@@ -62,7 +62,7 @@ body, html {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* اللوحة اليمنى - نموذج نظيف ومرتب */
+
 .right-panel {
     flex: 1;
     height: 100%;
@@ -74,7 +74,7 @@ body, html {
     background: #ffffff;
 }
 
-/* نمط نقاط خلفية هادئ وراقي */
+
 .bg-decoration {
     position: absolute;
     inset: 0;
@@ -104,7 +104,7 @@ body, html {
     letter-spacing: -0.5px;
 }
 
-/* حقول الإدخال بتصميم ناعم وعصري */
+
 .input-group {
     margin-bottom: 22px;
 }
@@ -149,7 +149,7 @@ body, html {
     text-decoration: underline;
 }
 
-/* زر تسجيل الدخول بتدرج لوني جذاب */
+
 .login-btn {
     width: 100%;
     padding: 16px;
@@ -173,7 +173,7 @@ body, html {
     transform: translateY(0);
 }
 
-/* فاصل أنيق */
+
 .divider {
     display: flex;
     align-items: center;
@@ -195,7 +195,7 @@ body, html {
     font-weight: 500;
 }
 
-/* أزرار السوشيال ميديا بتصميم مرتب */
+
 .social-login {
     display: flex;
     gap: 15px;
@@ -225,7 +225,7 @@ body, html {
     transform: translateY(-1px);
 }
 
-/* رابط التسجيل بالأسفل */
+
 .signup-prompt {
     text-align: center;
     font-size: 0.9rem;
@@ -242,7 +242,7 @@ body, html {
     text-decoration: underline;
 }
 
-/* التجاوب مع الشاشات الصغيرة */
+
 @media (max-width: 900px) {
     .login-container {
         flex-direction: column;

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaro - About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <!-- ربط مكتبة FontAwesome للإيقونات الحمراء -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/menu.css">
+    <link rel="stylesheet" href="assets/CSS/Delivery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/about.css">
+</head>
+<body>
+
+   
+
+   
+        
+        <!-- النافبار -->
+        <header class="header">
+        <nav class="navbar">
+            <!-- اللوجو -->
+            <div class="logo">
+
+                <img src="assets/imgs/Logo.png" alt="logo-header">
+
+            </div>
+
+            <!-- زر القائمة للموبايل -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- روابط التنقل -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <!-- قائمة منسدلة -->
+                <li class="dropdown">
+                    <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Delivery.html">Delivery</a></li>
+                        <li><a href="Our chef.html">Our Chef</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="helper-center.html">Help Center</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact us.html">Contact Us</a></li>
+                <!-- الزر داخل القائمة في وضع الموبايل -->
+                <li class="mobile-only"><a href="#" class="btn-pizza">GET YOUR PIZZA</a></li>
+            </ul>
+
+            <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
+            <a href="#" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+
+            <div class="cart-box">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</div>
+<button id="darkMode">
+    🌙
+</button>
+        </nav>
+    </header>
+
+        <!-- قسم About Us -->
+      
+
+     <section class="page-header hidden-section">
+        <div class="container-header">
+            
+            <!-- القسم الأيسر: العنوان والنص -->
+            <div class="header-content">
+                <h1>About us</h1>
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
+            </div>
+
+            <!-- القسم الأيمن: مسار التنقل (Breadcrumb) -->
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a>
+                <span class="separator">/</span>
+                <span class="current">about us</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- خط فاصل بين الصفحتين -->
+    <div class="page-divider-line  hidden-section"></div>
+
+    <!-- الصفحة الثانية (بملء الشاشة مع السكرول) -->
+    <section class="passion-daily-section">
+        <div class="passion-container">
+            
+            <!-- الجزء الشمال: الصورة والكارد العائم -->
+            <div class="passion-left">
+                <div class="passion-images-box" style="background: url('https://i.pinimg.com/1200x/94/55/f2/9455f2c0ff056ac0ace825de1a8959bb.jpg') center/cover no-repeat;">
+                </div>
+                
+                <!-- الكارد العائم -->
+                <div class="floating-ingredient-card">
+                    <div class="ingredient-icon-box">
+                        <div class="pizza-slice-sm"></div>
+                    </div>
+                    <div class="ingredient-text">
+                        <h3>Quality Fresh Ingredients</h3>
+                        <p>Venenatis convallis feugiat suspendisse sed a in fringilla sit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الجزء اليمين: النص -->
+            <div class="passion-right">
+                <h2>Passion Daily</h2>
+                <p>Urna vitae eget blandit morbi ornare dictum nulla sed. Natoque morbi eu nisl ipsum ac ac varius nisi. Tellus elit phasellus dignissim mollis vestibulum pulvinar et eu. A sit sapien ut pulvinar. Amet libero est tellus at. Egestas a arcu.</p>
+                <p>Et aliquam turpis arcu volutpat blandit elit nisl. Elementum in tellus morbi lectus sodales in nibh odio at. Praesent sapien sed lectus pellentesque augue dolor nunc. Mattis aliquam eget ultrices dui pretium convallis purus euismod sed. Duis blandit ac mus donec lacus. Sit diam arcu in sit tempus etiam cras pellentesque velit. Orci nulla id non amet mi a.</p>
+                <a href="#" class="discover-btn">DISCOVER MORE</a>
+            </div>
+
+        </div>
+
+        <!-- اللوجوهات السفلية -->
+        <div class="brands-footer-bar">
+            <div class="brand-shape-item">
+                <div class="shape-badge-1"><span></span><span></span></div>
+                <span>MEAT CO.</span>
+            </div>
+            <div class="brand-shape-item">
+                <div class="shape-badge-2"><span></span><span></span><span></span></div>
+                <span>logoipsum</span>
+            </div>
+            <div class="brand-shape-item">
+                <div class="shape-badge-3"></div>
+                <span>ULTRA WINNER</span>
+            </div>
+            <div class="brand-shape-item">
+                <div class="shape-badge-4"><div class="sq"></div><div class="rect"></div></div>
+                <span>QC MODULE</span>
+            </div>
+            <div class="brand-shape-item">
+                <div class="shape-badge-5"></div>
+                <span>AWARD WINNER</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم رحلة القصة -->
+    <section class="journey-section">
+        <div class="journey-header">
+            <div class="left-text">
+                <span class="story">Our Story</span>
+                <h2>
+                    A Journey Of Flavor <br>
+                    And Dedication
+                </h2>
+            </div>
+            <div class="right-text">
+                <p>
+                    In ut at hendrerit ultrices egestas aliquam.
+                    Diam vitae pharetra sit lorem molestie gravida
+                    pellentesque. In mollis arcu aliquet fermentum.
+                </p>
+            </div>
+        </div>
+    
+        <div class="journey-images">
+            <div class="journey-card">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="">
+                <span class="year">2012</span>
+                <h3>Starting Small Kitchen</h3>
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida.</p>
+            </div>
+        
+            <div class="journey-card">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="">
+                <span class="year">2016</span>
+                <h3>Expanding Local Presence</h3>
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida.</p>
+            </div>
+        
+            <div class="journey-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="">
+                <span class="year">2022</span>
+                <h3>Modernizing Every Experience</h3>
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم قيم الشركة الجديد (Our Values) بالصورة والأيقونات الحمراء -->
+    <section class="our-values-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title" style="color: #c84b31; font-weight: 600; text-transform: uppercase;">Our Values</span>
+                <h2 style="font-size: 38px; color: #2b3a2f; margin: 10px 0;">Delivering Real Quality In Every Bite</h2>
+                <p style="color: #666; font-size: 15px;">Ut pulvinar egestas venenatis quis. Nunc blandit pretium morbi enim faucibus quisque scelerisque laoreet.</p>
+            </div>
+
+            <div class="values-grid-wrapper" style="display: flex; justify-content: center; align-items: center; gap: 30px; max-width: 1200px; margin: 40px auto; position: relative;">
+                
+                <!-- العمود الأيسر (3 كروت) -->
+                <div class="about-container">
+                    <!-- العمود الأيسر -->
+                    <div class="values-column left-column">
+                        <div class="value-card">
+                            <div class="text-content">
+                                <h3>Fresh Quality Ingredients</h3>
+                                <p>Venenatis convallis feugiat suspendisse sed a in fringilla sit.</p>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-weight-scale"></i>
+                            </div>
+                        </div>
+                
+                        <div class="value-card">
+                            <div class="text-content">
+                                <h3>Authentic Baking Process</h3>
+                                <p>Venenatis convallis feugiat suspendisse sed a in fringilla sit.</p>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                        </div>
+                
+                        <div class="value-card">
+                            <div class="text-content">
+                                <h3>Customer First Service</h3>
+                                <p>Venenatis convallis feugiat suspendisse sed a in fringilla sit.</p>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-pizza-slice"></i>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- صورة البيتزا في المنتصف -->
+                    <div class="center-image-container">
+                        <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=80" alt="Pizza">
+                    </div>
+                
+                    <!-- العمود الأيمن -->
+                    <div class="values-column right-column">
+                        <div class="value-card">
+                            <div class="icon-box">
+                                <i class="fas fa-pizza-slice"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Consistent Taste</h3>
+                                <p>Venenatis convallis feugiat suspendisse sed a in fringilla sit.</p>
+                            </div>
+                        </div>
+                
+                        <div class="value-card">
+                            <div class="icon-box">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Fast Reliable Delivery</h3>
+                                <p>Venenatis convallis feugiat suspendisse sed a in fringilla sit.</p>
+                            </div>
+                        </div>
+                
+                        <div class="value-card">
+                            <div class="icon-box">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="text-content">
+                                <h3>Clean Safe Kitchen</h3>
+                                <p>Venenatis convallis feugiat suspendisse sed a in fringilla sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- بداية قسم الشيفات -->
+<section class="chefs-section">
+    <div class="chefs-container">
+        
+        <!-- رأس القسم (العنوان والوصف) -->
+        <div class="chefs-header">
+            <div class="chefs-header-left">
+                <span class="chefs-subtitle">Meet Our Chefs</span>
+                <h2 class="chefs-title">Crafting Every Pizza<br>With True Passion</h2>
+            </div>
+            <div class="chefs-header-right">
+                <p class="chefs-description">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
+            </div>
+        </div>
+
+        <!-- شبكة كروت الشيفات (الثلاث صور الأولى أو الصف الأول) -->
+        <div class="chefs-grid">
+            
+            <!-- الشيف الأول -->
+            <div class="chef-card">
+                <div class="chef-img-box">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80(https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80)" alt="Marco Bellini">
+                    <span class="chef-badge">Head Chef</span>
+                </div>
+                <h3 class="chef-name">Marco Bellini</h3>
+                <p class="chef-bio">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="chef-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- الشيف الثاني -->
+            <div class="chef-card">
+                <div class="chef-img-box">
+                    <img src="https://media.gettyimages.com/id/514774978/photo/woman-chef.jpg?s=612x612&w=0&k=20&c=3HiAJXdEPjYyvMDx16n1-1gfgMe-yn7rnC1B2d5saFU=" alt="Sofia Romano">
+                    <span class="chef-badge">Pizza Specialist</span>
+                </div>
+                <h3 class="chef-name">Sofia Romano</h3>
+                <p class="chef-bio">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="chef-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- الشيف الثالث -->
+            <div class="chef-card">
+                <div class="chef-img-box">
+                    <img src="https://images.pexels.com/photos/4253302/pexels-photo-4253302.jpeg" alt="Daniel Ventura">
+                    <span class="chef-badge">Flavor Master</span>
+                </div>
+                <h3 class="chef-name">Daniel Ventura</h3>
+                <p class="chef-bio">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="chef-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+<!-- الشيف الرابع -->
+<div class="chef-card">
+    <div class="chef-img-box">
+        <img src="https://media.istockphoto.com/id/1298088270/photo/young-beautiful-smiling-woman-chef-with-arms-crossed-at-kitchen.jpg?s=1024x1024&w=is&k=20&c=DW1hXwN2YZ5oW0U8qa13yzij1_VYRbs7pNdeY7BeCkI=" alt="Chef Name">
+        <span class="chef-badge">Master Chef</span>
+    </div>
+    <h3 class="chef-name">Antonio Rossi</h3>
+    <p class="chef-bio">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+    <div class="chef-social">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+<!-- الشيف الخامس -->
+<div class="chef-card">
+    <div class="chef-img-box">
+        <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=80(https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=80)" alt="Chef Name">
+        <span class="chef-badge">Sous Chef</span>
+    </div>
+    <h3 class="chef-name">Giulia Moretti</h3>
+    <p class="chef-bio">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+    <div class="chef-social">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+<!-- الشيف السادس -->
+<div class="chef-card">
+    <div class="chef-img-box">
+        <img src="https://media.istockphoto.com/id/1634442523/photo/happy-baker-in-uniform-at-door-of-her-cafe.jpg?s=612x612&w=0&k=20&c=RK9DkhxLL0bAvt67t9igYu8LVQk_-Yi6FD4U0XoC7Us=" alt="Chef Name">
+        <span class="chef-badge">Baker Expert</span>
+    </div>
+    <h3 class="chef-name">Matteo Conti</h3>
+    <p class="chef-bio">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+    <div class="chef-social">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+ <footer class="footer hidden-section">
+        <div class="container">
+            
+            <!-- القسم العلوي (اللوجو وأيقونات التواصل) -->
+            <div class="footer-top">
+                <div class="footer-logo">
+                  
+                    <img src="assets/imgs/Logo-1.png" alt="logo-footer">
+                   
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr>
+            <!-- القسم الأوسط (الروابط) -->
+            <div class="footer-middle">
+                <!-- العمود الأول -->
+                <div class="footer-col">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Room</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثاني -->
+                <div class="footer-col">
+                    <h2>Menu</h2>
+                    <ul>
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Pasta</a></li>
+                        <li><a href="#">Sides</a></li>
+                        <li><a href="#">Beverages</a></li>
+                        <li><a href="#">Desserts</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الثالث -->
+                <div class="footer-col">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="#">Dine-In</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Takeaway</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Bulk Orders</a></li>
+                    </ul>
+                </div>
+                <!-- العمود الرابع -->
+                <div class="footer-col contact-col">
+                    <h2>Contact Us</h2>
+                    <p class="contact-desc">Feel free to call us in working hours Mon - fri {8:00 - 16.00}. Our team will be happy to help answer your queries</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> +1 (333) 000-0000</p>
+                    <p class="contact-info"><i class="far fa-envelope"></i> info@pizzarorestaurant.com</p>
+                </div>
+            </div>
+
+            <!-- القسم السفلي (حقوق النشر والروابط القانونية) -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    Copyright &copy; 2025 Pizzaro <span class="divider">|</span> Design by Tokotema
+                </div>
+                <div class="legal-links">
+                    <a href="#">Term of use</a> <span class="divider">|</span>
+                    <a href="#">Privacy Policy</a> <span class="divider">|</span>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="assets/JS/delivery.js"></script>
+    <script src="assets/JS/main.js"></script>
+    
+    <script src="about-script.js"></script>
+</body>
+</html>

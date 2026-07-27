@@ -1,35 +1,35 @@
 :root {
     /* =========================================
-       1. Colors (الألوان)
+       1. Colors 
        ========================================= */
     
-    /* الألوان الأساسية (Primary Colors) */
-    --pz-primary: #e85d22;           /* البرتقالي الأساسي (اللوجو، الأزرار، التميزات) */
-    --pz-primary-hover: #d14a16;     /* برتقالي داكن (للهوفر - Hover) */
-    --pz-secondary: #ffb700;         /* أصفر/ذهبي (لأيقونات التقييم والنجوم) */
+    /*(Primary Colors) */
+    --pz-primary: #e85d22;           
+    --pz-primary-hover: #d14a16;     
+    --pz-secondary: #ffb700;         
     
-    /* ألوان الخلفيات (Background Colors) */
-    --pz-bg-body: #f4f0eb;           /* الكريمي/الأوف وايت (خلفية الموقع الرئيسية) */
-    --pz-bg-footer: #272F16;         /* الزيتي/الأخضر الداكن (خلفية الفوتر) */
-    --pz-bg-white: #ffffff;          /* أبيض نقي (لخلفيات الكروت والقوائم) */
+    /*(Background Colors) */
+    --pz-bg-body: #f4f0eb;           
+    --pz-bg-footer: #272F16;        
+    --pz-bg-white: #ffffff;          
     
-    /* ألوان النصوص (Text Colors) */
-    --pz-text-heading: #111111;      /* أسود داكن (للعناوين H1, H2, H3) */
-    --pz-text-body: #555555;         /* رمادي داكن (للنصوص العادية والفقرات) */
-    --pz-text-footer: #a4a89d;       /* رمادي فاتح (لنصوص وروابط الفوتر) */
-    --pz-text-white: #ffffff;        /* أبيض (للنصوص داخل الأزرار البرتقالية) */
+    /*(Text Colors) */
+    --pz-text-heading: #111111;      
+    --pz-text-body: #555555;         
+    --pz-text-footer: #a4a89d;       
+    --pz-text-white: #ffffff;        
     
-    /* ألوان الحدود والفواصل (Border Colors) */
+   
     --pz-border-light: rgba(0, 0, 0, 0.08);   
     --pz-border-dark: rgba(255, 255, 255, 0.1);
 
     /* =========================================
-       2. Typography (الخطوط)
+       2. Typography 
        ========================================= */
     --pz-font-primary: 'Nunito', sans-serif;
-    --pz-font-accent: 'Pacifico', cursive; /* للكلمات مثل "Fresh Woodfired Pizza" */
+    --pz-font-accent: 'Pacifico', cursive; 
 
-    /* أوزان الخطوط (Font Weights) */
+    /* (Font Weights) */
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
@@ -37,22 +37,23 @@
     --fw-black: 900;
 
     /* =========================================
-       3. Transitions & Shadows (الانتقالات والظلال)
+       3. Transitions & Shadows 
        ========================================= */
     
-    /* الانتقالات الناعمة (Transitions) */
+    /*  (Transitions) */
     --transition-fast: all 0.2s ease-in-out;
     --transition-normal: all 0.3s ease-in-out;
     --transition-slow: all 0.5s ease-in-out;
 
-    /* منحنى الحركة (Bezier Curves) لجعل الحركات طبيعية ومرنة مثل Elementor */
+    
     --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
-    /* ظلال العناصر (Box Shadows) */
+    /* (Box Shadows) */
     --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); /* ظل برتقالي للأزرار */
+    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); 
 }
+
 
 
 
@@ -67,7 +68,7 @@
      padding: 80px 0;
 }
 .subtitle {
-    font-family: 'Pacifico', cursive; /* الخط المائل */
+    font-family: 'Pacifico', cursive;
     color: #df440f;
     font-size: 18px;
     
@@ -135,14 +136,14 @@
 
 @media (max-width: 992px) {
     .story-card .story-grid {
-        grid-template-columns:repeat(2,1fr); /* وضع القسمين تحت بعض */
+        grid-template-columns:repeat(2,1fr); 
         gap: 50px;
     }
     .caption-our-story
 {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+  
 }
 .story-card .story-grid img
 {
@@ -154,27 +155,23 @@
     padding: 0 0px;
     margin: 10px 0;
 }
-    /* .story-card .story-grid
-    {
-         grid-template-columns: 1fr; /* تحويل لعمود واحد في الموبايل */
-        /* gap: 20px; */
-    } 
+   
 
 @media (max-width : 480px) {
   
   .container-delivery {
-        grid-template-columns: 1fr; /* وضع القسمين تحت بعض */
+        grid-template-columns: 1fr; 
         gap: 50px;
     }
     .caption-our-story
 {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+   
 }
     .story-card .story-grid
     {
-         grid-template-columns: 1fr; /* تحويل لعمود واحد في الموبايل */
+         grid-template-columns: 1fr; 
         gap: 20px;
     }
 }

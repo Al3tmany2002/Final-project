@@ -4,21 +4,21 @@
     padding: 80px 20px;
 }
 
-/* ================= الجزء العلوي ================= */
+
 .faq-section{
     background-color: #ffffff;
 }
 .faq-header {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* تقسيم لعمودين */
+    grid-template-columns: 1fr 1fr; 
     gap: 40px;
-    align-items: flex-end; /* محاذاة النص مع أسفل العنوان */
+    align-items: flex-end; 
     margin-bottom: 50px;
 }
 
 .subtitle {
     font-family: 'Pacifico', cursive;
-    color: #df440f; /* اللون البرتقالي */
+    color: #df440f; 
     font-size: 18px;
     display: block;
     margin-bottom: 10px;
@@ -26,7 +26,7 @@
 
 .faq-title-area h2 {
     font-size: 42px;
-    color: #293322; /* اللون الأخضر الزيتوني الداكن */
+    color: #293322; 
     font-weight: 900;
     line-height: 1.2;
 }
@@ -36,32 +36,32 @@
     line-height: 1.6;
 }
 
-/* ================= الجزء السفلي (الأكورديون والصورة) ================= */
+
 .faq-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* تقسيم لعمودين متساويين */
+    grid-template-columns: 1fr 1fr; 
     gap: 50px;
 }
 
-/* --- تنسيق الأكورديون --- */
+
 .accordion-area {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* المسافة بين الأسئلة */
+    gap: 15px; 
 }
 
 .accordion-item {
-    border: 1px solid #e5e5e5; /* إطار خفيف افتراضي */
+    border: 1px solid #e5e5e5; 
     border-radius: 12px;
     background-color: #ffffff;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
-/* حالة العنصر المفتوح (Active) */
+
 .accordion-item.active {
-    background-color: #f1efe8; /* خلفية بيج فاتح */
-    border-color: #f1efe8; /* إخفاء الإطار في حالة الفتح */
+    background-color: #f1efe8; 
+    border-color: #f1efe8; 
 }
 
 .accordion-header {
@@ -80,14 +80,14 @@
     transition: padding 0.3s ease;
 }
 
-/* أيقونة السهم */
+
 .accordion-header .icon {
     color: #df440f;
     font-size: 14px;
     transition: transform 0.3s ease;
 }
 
-/* دوران السهم وتقليل البادنج عند الفتح */
+
 .accordion-item.active .accordion-header {
     padding-bottom: 10px;
 }
@@ -95,9 +95,9 @@
     transform: rotate(180deg);
 }
 
-/* جسم الإجابة */
+
 .accordion-body {
-    max-height: 0; /* الإخفاء الافتراضي */
+    max-height: 0; 
     overflow: hidden;
     padding: 0 25px;
     transition: max-height 0.4s ease, padding 0.4s ease;
@@ -113,7 +113,7 @@
     line-height: 1.6;
 }
 
-/* --- تنسيق الصورة --- */
+
 .image-area img {
     width: 100%;
     height: 100%;
@@ -125,7 +125,7 @@
 /* ================= التجاوب مع الشاشات ================= */
 @media (max-width: 810px) {
     .faq-header, .faq-content {
-        grid-template-columns: 1fr; /* تحويل لعمود واحد في الموبايل */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
     .faq-header {

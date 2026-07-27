@@ -3,76 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaro Footer</title>
-    <!-- استدعاء خطوط FontAwesome للأيقونات -->
-     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Pizzaro - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/all.min.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/menu.css">
 </head>
 <body>
-    <!-- Start Section navbar  -->
-     <header class="header">
-        <nav class="header">
+   <header class="header">
         <nav class="navbar">
-            <!-- اللوجو -->
             <div class="logo">
-         
-                    <img src="assets/imgs/Logo.png" alt="logo-header">
-               
+                <img src="assets/imgs/Logo.png" alt="logo-header">
             </div>
 
-            <!-- زر القائمة للموبايل -->
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
 
-            <!-- روابط التنقل -->
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Menu</a></li>
-                <!-- قائمة منسدلة -->
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <li class="dropdown">
                     <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="Delivery.html">Delivery</a></li>
                         <li><a href="Our chef.html">Our Chef</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="event.html">Events</a></li>
                         <li><a href="helper-center.html">Help Center</a></li>
-                       <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
                     </ul>
                 </li>
                 <li><a href="contact us.html">Contact Us</a></li>
-                <!-- الزر داخل القائمة في وضع الموبايل -->
-                <li class="mobile-only"><a href="#" class="btn-pizza">GET YOUR PIZZA</a></li>
+                <li class="mobile-only"><a href="menu.html" class="btn-pizza">GET YOUR PIZZA</a></li>
             </ul>
 
-            <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
-            <a href="#menu-section" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+            <a href="menu.html" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+
+            <div class="cart-box" id="cartBox">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <button id="darkMode">🌙</button>
         </nav>
-    </nav>
     </header> 
 
+    <div id="popup">
+        <button id="prev-img">&#10094;</button>
+        <img id="popup-img" alt="Popup Image">
+        <button id="next-img">&#10095;</button>
+    </div>
 
- 
-
-    <!-- Svg / Hero Section -->
     <section class="hero-section">
         <div class="hero-container">
-            
-            <!-- الجزء الشمال: النصوص -->
             <div class="hero-content">
-                
                 <span class="subtitle">Fresh Woodfired Pizza</span>
                 <h1>Crafted Daily For <br>Perfect Flavor</h1>
                 <p>Taste authentic, wood-fired pizza made with premium ingredients and baked to perfection. Enjoy dine-in comfort or fast delivery straight to your door.</p>
-                <button class="btn-pizza" id="getPizzaBtn">GET YOUR PIZZA</button>
+                <a href="menu.html" class="btn-pizza" id="getPizzaBtn" style="display: inline-block; text-align: center; text-decoration: none;">GET YOUR PIZZA</a>
             </div>
 
-            <!-- الجزء اليمين: الشيف والتقييم -->
             <div class="hero-right">
                 <div class="rating-box">
                     <span class="rating-number">4.9</span>
@@ -83,509 +76,394 @@
                     <img src="https://i.pinimg.com/originals/40/18/6a/40186a67fe7d233b40de55594386abff.png" alt="Chef">
                 </div>
             </div>
-
         </div>
 
-        <!-- كارت البيتزا العائم (Margherita Classic) -->
         <div class="pizza-card-float">
             <h3>Margherita Classic</h3>
             <p>Tomato sauce, fresh mozzarella, basil leaves, olive oil, oregano seasoning.</p>
             <div class="card-footer">
-                <span class="price">$8.90</span>
-                <button class="order-now" id="orderNowBtn">ORDER NOW</button>
+                <span class="price">250 LE</span>
+                <a href="menu.html" class="order-now" id="orderNowBtn" style="text-decoration: none; display: inline-block;">ORDER NOW</a>
             </div>
         </div>
 
-        <!-- صورة البيتزا الكبيرة في الخلفية من تحت -->
         <div class="hero-big-pizza">
             <img src="https://i.pinimg.com/originals/15/b3/b0/15b3b03f4946dd20129ad9d652653936.png" alt="Big Pizza">
         </div>
     </section>
-<section class="categories-section">
-    <!-- رأس القسم (العنوان والزر) -->
-    <div class="section-header">
-        <h2 class="section-title">Taste by Category</h2>
-        <a href="#" class="browse-btn">BROWSE MENU</a>
-    </div>
 
-    <!-- محتوى القسم (القوائم والورود/الصور) -->
-    <div class="categories-container">
-        
-        <!-- العمود الأيسر: الفئات (Pizza, Pasta, Sides) -->
-        <div class="categories-list">
-            
-            <!-- عنصر 1: بيتزا -->
-            <div class="category-card active">
-                <div class="category-icon">
-                    <img src="pizza-icon.png" alt="Pizza">
+    <section class="categories-section">
+        <div class="section-header">
+            <h2 class="section-title">Taste by Category</h2>
+            <a href="menu.html" class="browse-btn">BROWSE MENU</a>
+        </div>
+
+        <div class="categories-container">
+            <div class="categories-list">
+                <a href="menu.html" class="category-card active" style="text-decoration: none; color: inherit; display: flex;">
+                    <div class="category-icon">
+                        <img src="https://i.pinimg.com/1200x/cc/ef/cb/ccefcb5f40d3927a92f3232c8491e531.jpg" alt="Pizza">
+                    </div>
+                    <div class="category-info">
+                        <h3>Pizza</h3>
+                        <p>Crafted fresh with flavors everyone truly loves</p>
+                    </div>
+                    <span class="item-count">14 Items</span>
+                </a>
+
+                <a href="menu.html" class="category-card" style="text-decoration: none; color: inherit; display: flex;">
+                    <div class="category-icon">
+                        <img src="https://i.pinimg.com/1200x/5f/82/a7/5f82a7e7fb78f8e40a671a869b5ac4bd.jpg" alt="Pizza Chicken">
+                    </div>
+                    <div class="category-info">
+                        <h3>Pizza Chicken</h3>
+                        <p>Pizza Chicken fresh every day</p>
+                    </div>
+                    <span class="item-count">12 Items</span>
+                </a>
+
+                <a href="menu.html" class="category-card" style="text-decoration: none; color: inherit; display: flex;">
+                    <div class="category-icon">
+                        <img src="https://i.pinimg.com/1200x/0c/bf/d2/0cbfd2ac987c070b6270ae52a37761d6.jpg" alt="Sides">
+                    </div>
+                    <div class="category-info">
+                        <h3>Sides</h3>
+                        <p>Perfect side dishes for every pizza meal</p>
+                    </div>
+                    <span class="item-count">10 Items</span>
+                </a>
+            </div>
+
+            <div class="category-images">
+                <div class="image-box">
+                    <img src="https://i.pinimg.com/736x/d1/97/db/d197db1fdb930fb124b15e01e169e0b4.jpg" alt="Fresh Pizza">
                 </div>
-                <div class="category-info">
-                    <h3>Pizza</h3>
-                    <p>Crafted fresh with flavors everyone truly loves</p>
-                </div>
-                <span class="item-count">14 Items</span>
-            </div>
-
-            <!-- عنصر 2: مكرونة -->
-            <div class="category-card">
-                <div class="category-icon">
-                    <img src="pizza" alt="Pizza">
-                </div>
-                <div class="category-info">
-                    <h3>Pizza Chicken</h3>
-                    <p> Pizza Chicken fresh every day</p>
-                </div>
-                <span class="item-count">12 Items</span>
-            </div>
-
-            <!-- عنصر 3: أطباق جانبية -->
-            <div class="category-card">
-                <div class="category-icon">
-                    <img src="sides-icon.png" alt="Sides">
-                </div>
-                <div class="category-info">
-                    <h3>Sides</h3>
-                    <p>Perfect side dishes for every pizza meal</p>
-                </div>
-                <span class="item-count">10 Items</span>
-            </div>
-
-        </div>
-
-        <!-- العمود الأيمن: الصور الجمالية (صورة البيتزا والشيف) -->
-        <div class="category-images">
-            <div class="image-box">
-                <img src="pizza-prep.jpg" alt="Fresh Pizza">
-            </div>
-            <div class="image-box">
-                <img src="chef-portrait.jpg" alt="Our Chef">
-            </div>
-        </div>
-
-    </div>
-</section>
-<section class="favorites-section">
-    <!-- رأس القسم (العنوان ووصف جانبي) -->
-    <div class="favorites-header">
-        <div class="header-title-box">
-            <h2>Customer Favorites<br>You Must Try</h2>
-        </div>
-        <div class="header-desc-box">
-            <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-        </div>
-    </div>
-
-    <!-- شبكة المنتجات (الكرات) -->
-    <div class="favorites-grid">
-        
-        <!-- المنتج الأول: Margherita Classic -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="margherita.jpg" alt="Margherita Classic">
-            </div>
-            <div class="product-content">
-                <div class="product-title-price">
-                    <h3>Margherita Classic</h3>
-                    <span class="price">$8.90</span>
-                </div>
-                <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-                <button class="order-btn">ORDER NOW</button>
-            </div>
-        </div>
-
-        <!-- المنتج الثاني: Pepperoni Feast -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="pepperoni.jpg" alt="Pepperoni Feast">
-            </div>
-            <div class="product-content">
-                <div class="product-title-price">
-                    <h3>Pepperoni Feast</h3>
-                    <span class="price">$10.50</span>
-                </div>
-                <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-                <button class="order-btn">ORDER NOW</button>
-            </div>
-        </div>
-
-        <!-- المنتج الثالث: BBQ Chicken -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="bbq-chicken.jpg" alt="BBQ Chicken">
-            </div>
-            <div class="product-content">
-                <div class="product-title-price">
-                    <h3>BBQ Chicken</h3>
-                    <span class="price">$11.20</span>
-                </div>
-                <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-                <button class="order-btn">ORDER NOW</button>
-            </div>
-        </div>
-
-        <!-- المنتج الرابع: Cheese Burst -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="cheese-burst.jpg" alt="Cheese Burst">
-            </div>
-            <div class="product-content">
-                <div class="product-title-price">
-                    <h3>Cheese Burst</h3>
-                    <span class="price">$9.60</span>
-                </div>
-                <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-                <button class="order-btn">ORDER NOW</button>
-            </div>
-        </div>
-
-        <!-- المنتج الخامس: Hawaiian Bliss -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="hawaiian.jpg" alt="Hawaiian Bliss">
-            </div>
-            <div class="product-content">
-                <div class="product-title-price">
-                    <h3>Hawaiian Bliss</h3>
-                    <span class="price">$10.50</span>
-                </div>
-                <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-                <button class="order-btn">ORDER NOW</button>
-            </div>
-        </div>
-
-        <!-- المنتج السادس: Veggie Supreme -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="veggie.jpg" alt="Veggie Supreme">
-            </div>
-            <div class="product-content">
-                <div class="product-title-price">
-                    <h3>Veggie Supreme</h3>
-                    <span class="price">$9.90</span>
-                </div>
-                <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-                <button class="order-btn">ORDER NOW</button>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="delivery-section">
-    <!-- عنوان ووصف القسم -->
-    <div class="delivery-header">
-        <span class="sub-heading">Fast Delivery</span>
-        <h2>Fresh Pizza<br>Delivered Anytime</h2>
-        <p>Ut pulvinar egestas venenatis quis. Nunc blandit pretium morbi<br>enim faucibus quisque scelerisque laoreet.</p>
-    </div>
-
-    <!-- شبكة المميزات الثلاثة -->
-    <div class="features-grid">
-        
-        <!-- الميزة الأولى -->
-        <div class="feature-card">
-            <div class="feature-icon">
-                <img src="delivery-time-icon.png" alt="Delivery On Time">
-            </div>
-            <h3>Delivery Always<br>On Time</h3>
-        </div>
-
-        <!-- الميزة الثانية -->
-        <div class="feature-card">
-            <div class="feature-icon">
-                <img src="fresh-meals-icon.png" alt="Fresh Meals">
-            </div>
-            <h3>Fresh Meals<br>Every Delivery</h3>
-        </div>
-
-        <!-- الميزة الثالثة -->
-        <div class="feature-card">
-            <div class="feature-icon">
-                <img src="coverage-icon.png" alt="Wide Coverage">
-            </div>
-            <h3>Wide Coverage<br>Delivery Area</h3>
-        </div>
-
-    </div>
-</section>
-<section class="recommended-section">
-    <!-- رأس القسم (العنوان والوصف) -->
-    <div class="recommended-header">
-        <div class="header-titles">
-            <span class="sub-title">Chef Choice</span>
-            <h2>Recommended Dishes<br>From Us</h2>
-        </div>
-        <div class="header-description">
-            <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-        </div>
-    </div>
-
-    <!-- محتوى القسم (شبكة الأطباق + البانر الإعلاني) -->
-    <div class="recommended-container">
-        
-        <!-- شبكة الأطباق (3 أعمدة × صفين) -->
-        <div class="dishes-grid">
-            
-            <!-- طبق 1: Pesto Delight -->
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="pesto.jpg" alt="Pesto Delight">
-                    <span class="dish-price">$10.90</span>
-                </div>
-                <h3 class="dish-name">Pesto Delight</h3>
-            </div>
-
-            <!-- طبق 2: Seafood Royale -->
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="seafood.jpg" alt="Seafood Royale">
-                    <span class="dish-price">$14.20</span>
-                </div>
-                <h3 class="dish-name">Seafood Royale</h3>
-            </div>
-
-            <!-- طبق 3: Buffalo Chicken -->
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="buffalo.jpg" alt="Buffalo Chicken">
-                    <span class="dish-price">$11.60</span>
-                </div>
-                <h3 class="dish-name">Buffalo Chicken</h3>
-            </div>
-
-            <!-- طبق 4: Garlic Cheese -->
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="garlic.jpg" alt="Garlic Cheese">
-                    <span class="dish-price">$9.40</span>
-                </div>
-                <h3 class="dish-name">Garlic Cheese</h3>
-            </div>
-
-            <!-- طبق 5: Italian Sausage -->
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="sausage.jpg" alt="Italian Sausage">
-                    <span class="dish-price">$11.90</span>
-                </div>
-                <h3 class="dish-name">Italian Sausage</h3>
-            </div>
-
-            <!-- طبق 6: Four Seasons -->
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="fourseasons.jpg" alt="Four Seasons">
-                    <span class="dish-price">$12.50</span>
-                </div>
-                <h3 class="dish-name">Four Seasons</h3>
-            </div>
-
-        </div>
-
-        <!-- البانر الترويجي الكبير (الجانب الأيمن) -->
-        <div class="promo-banner">
-            <div class="promo-content">
-                <span class="promo-tag">Order Today</span>
-                <h3>Hot Pizza Awaits You</h3>
-                <button class="promo-btn">ORDER TODAY</button>
-            </div>
-            <!-- صورة البيتزا الخلفية للبانر يتم ضبطها عبر CSS أو هنا -->
-        </div>
-
-    </div>
-</section>
-<section class="why-choose-section">
-    <!-- الجانب الأيسر: الصور المتداخلة (الشيف والبيتزا) -->
-    <div class="why-choose-images">
-        <div class="chef-large-img">
-            <img src="chef-working.jpg" alt="Chef Working">
-        </div>
-        <div class="pizza-small-img">
-            <img src="top-pizza.jpg" alt="Fresh Pizza Top View">
-        </div>
-    </div>
-
-    <!-- الجانب الأيمن: النصوص والمميزات والزر -->
-    <div class="why-choose-content">
-        <span class="sub-title">Why Choose Us</span>
-        <h2>Quality Food Fast<br>Delivery</h2>
-        <p class="section-desc">
-            Nec dictum vel a non semper nunc. Erat quam ornare facilisis purus elit iaculis at laoreet. Velit volutpat etiam lacus cras vitae. Enim turpis eu sit nisl integer tellus pellentesque.
-        </p>
-
-        <!-- قائمة المميزات بعلامات الصح -->
-        <ul class="features-list">
-            <li>
-                <span class="check-icon">✓</span>
-                <span>Premium Quality Ingredients</span>
-            </li>
-            <li>
-                <span class="check-icon">✓</span>
-                <span>Skilled Experienced Chefs</span>
-            </li>
-            <li>
-                <span class="check-icon">✓</span>
-                <span>Fast Reliable Delivery</span>
-            </li>
-        </ul>
-
-        <button class="discover-btn">DISCOVER MORE</button>
-    </div>
-</section>
-<section class="customer-voices-section">
-    <!-- رأس القسم (العنوان والوصف) -->
-    <div class="voices-header">
-        <div class="header-titles">
-            <span class="sub-title">Customer Voices</span>
-            <h2>Honest Words From<br>Customers</h2>
-        </div>
-        <div class="header-description">
-            <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
-        </div>
-    </div>
-
-    <!-- شبكة بطاقات التقييمات -->
-    <div class="voices-grid">
-        <!-- البطاقة 1 -->
-        <div class="voice-card">
-            <div class="card-top">
-                <span class="quote-icon">“</span>
-                <h3>So Good</h3>
-                <div class="rating">
-                    <span>4.9/5</span> <span class="star">★</span>
-                </div>
-            </div>
-            <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet.</p>
-            <div class="customer-info">
-                <div class="customer-img"><img src="adrian.jpg" alt="Adrian Keller"></div>
-                <div>
-                    <h4>Adrian Keller</h4>
-                    <span>West Avenue</span>
+                <div class="image-box">
+                    <img src="https://i.pinimg.com/1200x/99/af/9e/99af9edeefa3119ed3051bdc88ca5a27.jpg" alt="Our Chef">
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- البطاقة 2 -->
-        <div class="voice-card">
-            <div class="card-top">
-                <span class="quote-icon">“</span>
-                <h3>Loved It</h3>
-                <div class="rating">
-                    <span>4.9/5</span> <span class="star">★</span>
-                </div>
+    <section class="favorites-section">
+        <div class="favorites-header">
+            <div class="header-title-box">
+                <h2>Customer Favorites<br>You Must Try</h2>
             </div>
-            <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet.</p>
-            <div class="customer-info">
-                <div class="customer-img"><img src="melisa.jpg" alt="Melisa Rowan"></div>
-                <div>
-                    <h4>Melisa Rowan</h4>
-                    <span>Green District</span>
-                </div>
+            <div class="header-desc-box">
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
             </div>
         </div>
 
-        <!-- البطاقة 3 -->
-        <div class="voice-card">
-            <div class="card-top">
-                <span class="quote-icon">“</span>
-                <h3>Super Fresh</h3>
-                <div class="rating">
-                    <span>4.9/5</span> <span class="star">★</span>
+        <div class="favorites-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/a2/74/1c/a2741cd8d94391ea7fdafbb266599c1a.jpg" alt="Margherita Classic">
+                </div>
+                <div class="product-content">
+                    <div class="product-title-price">
+                        <h3>Margherita Classic</h3>
+                        <span class="price">250 LE</span>
+                    </div>
+                    <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                    <a href="menu.html" class="order-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER NOW</a>
                 </div>
             </div>
-            <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet.</p>
-            <div class="customer-info">
-                <div class="customer-img"><img src="brandon.jpg" alt="Brandon Hale"></div>
-                <div>
-                    <h4>Brandon Hale</h4>
-                    <span>City Center</span>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/0a/e5/ce/0ae5ce32d87ae04999fccabfc7a42976.jpg" alt="Pepperoni Feast">
+                </div>
+                <div class="product-content">
+                    <div class="product-title-price">
+                        <h3>Pepperoni Feast</h3>
+                        <span class="price">300 LE</span>
+                    </div>
+                    <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                    <a href="menu.html" class="order-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/da/fe/99/dafe997b7f1a7ec3f418d3e649dbefea.jpg" alt="BBQ Chicken">
+                </div>
+                <div class="product-content">
+                    <div class="product-title-price">
+                        <h3>BBQ Chicken</h3>
+                        <span class="price">320 LE</span>
+                    </div>
+                    <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                    <a href="menu.html" class="order-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/7b/cf/b6/7bcfb62de522fa909e856a0e79542f5b.jpg" alt="Cheese Burst">
+                </div>
+                <div class="product-content">
+                    <div class="product-title-price">
+                        <h3>Cheese Burst</h3>
+                        <span class="price">280 LE</span>
+                    </div>
+                    <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                    <a href="menu.html" class="order-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/01/34/b9/0134b97cf5d71095095da126c7dff19d.jpg" alt="Hawaiian Bliss">
+                </div>
+                <div class="product-content">
+                    <div class="product-title-price">
+                        <h3>Hawaiian Bliss</h3>
+                        <span class="price">300 LE</span>
+                    </div>
+                    <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                    <a href="menu.html" class="order-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/1200x/25/a8/5e/25a85ebb1d8b76f9f8dff325cdcdb852.jpg" alt="Veggie Supreme">
+                </div>
+                <div class="product-content">
+                    <div class="product-title-price">
+                        <h3>Veggie Supreme</h3>
+                        <span class="price">290 LE</span>
+                    </div>
+                    <p class="product-desc">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                    <a href="menu.html" class="order-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER NOW</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- البطاقة 4 -->
-        <div class="voice-card">
-            <div class="card-top">
-                <span class="quote-icon">“</span>
-                <h3>Best Pizza</h3>
-                <div class="rating">
-                    <span>4.9/5</span> <span class="star">★</span>
+    <section class="delivery-section">
+        <div class="delivery-header">
+            <span class="sub-heading">Fast Delivery</span>
+            <h2>Fresh Pizza<br>Delivered Anytime</h2>
+            <p>Ut pulvinar egestas venenatis quis. Nunc blandit pretium morbi<br>enim faucibus quisque scelerisque laoreet.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://img.icons8.com/ios-filled/100/222222/clock.png" alt="Delivery On Time">
                 </div>
+                <h3>Delivery Always<br>On Time</h3>
             </div>
-            <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet.</p>
-            <div class="customer-info">
-                <div class="customer-img"><img src="clara.jpg" alt="Clara Venson"></div>
-                <div>
-                    <h4>Clara Venson</h4>
-                    <span>Hill Park</span>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://img.icons8.com/ios-filled/100/222222/kawaii-pizza.png" alt="Fresh Meals">
                 </div>
+                <h3>Fresh Meals<br>Every Delivery</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://img.icons8.com/ios-filled/100/222222/map-pin.png" alt="Wide Coverage">
+                </div>
+                <h3>Wide Coverage<br>Delivery Area</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended-section">
+        <div class="recommended-header">
+            <div class="header-titles">
+                <span class="sub-title">Chef Choice</span>
+                <h2>Recommended Dishes<br>From Us</h2>
+            </div>
+            <div class="header-description">
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
             </div>
         </div>
 
-        <!-- البطاقة 5 -->
-        <div class="voice-card">
-            <div class="card-top">
-                <span class="quote-icon">“</span>
-                <h3>Really Tasty</h3>
-                <div class="rating">
-                    <span>4.9/5</span> <span class="star">★</span>
+        <div class="recommended-container">
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://i.pinimg.com/1200x/e2/84/8f/e2848f73a035ebb2d47cc7cb71ce4b8f.jpg" alt="Pesto Delight">
+                        <span class="dish-price">310 LE</span>
+                    </div>
+                    <h3 class="dish-name">Pesto Delight</h3>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://i.pinimg.com/736x/76/4a/e3/764ae3bee75fa6080f8cd2610a3690c8.jpg" alt="Seafood Royale">
+                        <span class="dish-price">400 LE</span>
+                    </div>
+                    <h3 class="dish-name">Seafood Royale</h3>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://i.pinimg.com/736x/c8/41/5c/c8415c5f83194f6b041b1bbe393d7eb8.jpg" alt="Buffalo Chicken">
+                        <span class="dish-price">330 LE</span>
+                    </div>
+                    <h3 class="dish-name">Buffalo Chicken</h3>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://i.pinimg.com/736x/3c/5f/60/3c5f60489e084c82725a120c299a9c4f.jpg" alt="Garlic Cheese">
+                        <span class="dish-price">270 LE</span>
+                    </div>
+                    <h3 class="dish-name">Garlic Cheese</h3>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://i.pinimg.com/736x/71/83/5d/71835db6414914b5a3b4f2bbcf9c8995.jpg" alt="Italian Sausage">
+                        <span class="dish-price">340 LE</span>
+                    </div>
+                    <h3 class="dish-name">Italian Sausage</h3>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://i.pinimg.com/736x/d4/4e/6e/d44e6ee4fcbbc88e04434a2478048d55.jpg" alt="Four Seasons">
+                        <span class="dish-price">350 LE</span>
+                    </div>
+                    <h3 class="dish-name">Four Seasons</h3>
                 </div>
             </div>
-            <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet.</p>
-            <div class="customer-info">
-                <div class="customer-img"><img src="felix.jpg" alt="Felix Morano"></div>
-                <div>
-                    <h4>Felix Morano</h4>
-                    <span>South Point</span>
+
+            <div class="promo-banner">
+                <div class="promo-content">
+                    <span class="promo-tag">Order Today</span>
+                    <h3>Hot Pizza Awaits You</h3>
+                    <a href="menu.html" class="promo-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER TODAY</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- البطاقة 6 -->
-        <div class="voice-card">
-            <div class="card-top">
-                <span class="quote-icon">“</span>
-                <h3>Great Service</h3>
-                <div class="rating">
-                    <span>4.9/5</span> <span class="star">★</span>
+    <section class="why-choose-section">
+        <div class="why-choose-images">
+            <div class="chef-large-img">
+                <img src="https://i.pinimg.com/1200x/0e/c6/34/0ec63424467277cbcb827cac25380b74.jpg" alt="Chef Working">
+            </div>
+            <div class="pizza-small-img">
+                <img src="https://i.pinimg.com/736x/74/eb/b6/74ebb632ff91ac1550e8e3669dcf0643.jpg" alt="Fresh Pizza Top View">
+            </div>
+        </div>
+
+        <div class="why-choose-content">
+            <span class="sub-title">Why Choose Us</span>
+            <h2>Quality Food Fast<br>Delivery</h2>
+            <p class="section-desc">
+                Nec dictum vel a non semper nunc. Erat quam ornare facilisis purus elit iaculis at laoreet. Velit volutpat etiam lacus cras vitae. Enim turpis eu sit nisl integer tellus pellentesque.
+            </p>
+            <ul class="features-list">
+                <li><span class="check-icon">✓</span> <span>Premium Quality Ingredients</span></li>
+                <li><span class="check-icon">✓</span> <span>Skilled Experienced Chefs</span></li>
+                <li><span class="check-icon">✓</span> <span>Fast Reliable Delivery</span></li>
+            </ul>
+            <a href="menu.html" class="discover-btn" style="text-decoration: none; display: inline-block; text-align: center;">DISCOVER MORE</a>
+        </div>
+    </section>
+
+    <section class="customer-voices-section">
+        <div class="voices-header">
+            <div class="header-titles">
+                <span class="sub-title">Customer Voices</span>
+                <h2>Honest Words From<br>Customers</h2>
+            </div>
+            <div class="header-description">
+                <p>In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet fermentum.</p>
+            </div>
+        </div>
+
+        <div class="voices-grid">
+            <div class="voice-card">
+                <div class="card-top">
+                    <span class="quote-icon">“</span>
+                    <h3>So Good</h3>
+                    <div class="rating"><span>4.9/5</span> <span class="star">★</span></div>
+                </div>
+                <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="customer-info">
+                    <div class="customer-img"><img src="https://i.pinimg.com/736x/26/d9/00/26d900175e98baabcc53ccecf603dec5.jpg" alt="Adrian Keller"></div>
+                    <div><h4>Adrian Keller</h4><span>West Avenue</span></div>
                 </div>
             </div>
-            <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque. In mollis arcu aliquet.</p>
-            <div class="customer-info">
-                <div class="customer-img"><img src="julian.jpg" alt="Julian Reed"></div>
-                <div>
-                    <h4>Julian Reed</h4>
-                    <span>Garden Block</span>
+            <div class="voice-card">
+                <div class="card-top">
+                    <span class="quote-icon">“</span>
+                    <h3>Loved It</h3>
+                    <div class="rating"><span>4.9/5</span> <span class="star">★</span></div>
+                </div>
+                <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="customer-info">
+                    <div class="customer-img"><img src="https://i.pinimg.com/1200x/2b/77/0d/2b770d0b0146290606c04c13738b60e8.jpg" alt="Melisa Rowan"></div>
+                    <div><h4>Melisa Rowan</h4><span>Green District</span></div>
+                </div>
+            </div>
+            <div class="voice-card">
+                <div class="card-top">
+                    <span class="quote-icon">“</span>
+                    <h3>Super Fresh</h3>
+                    <div class="rating"><span>4.9/5</span> <span class="star">★</span></div>
+                </div>
+                <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="customer-info">
+                    <div class="customer-img"><img src="https://i.pinimg.com/originals/d6/3c/1e/d63c1e7fa683f8cbe2e21135876a90a0.png" alt="Brandon Hale"></div>
+                    <div><h4>Brandon Hale</h4><span>City Center</span></div>
+                </div>
+            </div>
+            <div class="voice-card">
+                <div class="card-top">
+                    <span class="quote-icon">“</span>
+                    <h3>Best Pizza</h3>
+                    <div class="rating"><span>4.9/5</span> <span class="star">★</span></div>
+                </div>
+                <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="customer-info">
+                    <div class="customer-img"><img src="https://i.pinimg.com/736x/9d/43/13/9d43133a9031c6e0b458cf500d4b7377.jpg" alt="Clara Venson"></div>
+                    <div><h4>Clara Venson</h4><span>Hill Park</span></div>
+                </div>
+            </div>
+            <div class="voice-card">
+                <div class="card-top">
+                    <span class="quote-icon">“</span>
+                    <h3>Really Tasty</h3>
+                    <div class="rating"><span>4.9/5</span> <span class="star">★</span></div>
+                </div>
+                <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="customer-info">
+                    <div class="customer-img"><img src="https://i.pinimg.com/736x/69/3f/24/693f2456a083458ca474c690f61ebf7b.jpg" alt="Felix Morano"></div>
+                    <div><h4>Felix Morano</h4><span>South Point</span></div>
+                </div>
+            </div>
+            <div class="voice-card">
+                <div class="card-top">
+                    <span class="quote-icon">“</span>
+                    <h3>Great Service</h3>
+                    <div class="rating"><span>4.9/5</span> <span class="star">★</span></div>
+                </div>
+                <p class="review-text">In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.</p>
+                <div class="customer-info">
+                    <div class="customer-img"><img src="https://i.pinimg.com/736x/83/02/27/83022736bd2ddc52ceadff2c57aca037.jpg" alt="Julian Reed"></div>
+                    <div><h4>Julian Reed</h4><span>Garden Block</span></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="pizzaro-hero-section">
-    <div class="pizzaro-hero-content">
-        <span class="pizzaro-hero-tag">Fast Delivery</span>
-        <h1>Enjoy Fresh Hot Pizza<br>Delivered To You</h1>
-        <p>Ut pulvinar egestas venenatis quis. Nunc blandit pretium morbi<br>enim faucibus quisque scelerisque laoreet.</p>
-        <button class="pizzaro-order-btn">ORDER DELIVERY</button>
-    </div>
-</section>
+    <section class="pizzaro-hero-section">
+        <div class="pizzaro-hero-content">
+            <span class="pizzaro-hero-tag">Fast Delivery</span>
+            <h1>Enjoy Fresh Hot Pizza<br>Delivered To You</h1>
+            <p>Ut pulvinar egestas venenatis quis. Nunc blandit pretium morbi<br>enim faucibus quisque scelerisque laoreet.</p>
+            <a href="menu.html" class="pizzaro-order-btn" style="text-decoration: none; display: inline-block; text-align: center;">ORDER DELIVERY</a>
+        </div>
+    </section>
     
-    <!-- ربط ملف الـ JavaScript -->
-    <script src="script.js"></script>
-       
-
-
-   <!-- Start Section footer  -->
     <footer class="footer">
         <div class="container">
-            
-            <!-- القسم العلوي (اللوجو وأيقونات التواصل) -->
             <div class="footer-top">
                 <div class="footer-logo">
-                  
                     <img src="assets/imgs/Logo-1.png" alt="logo-footer">
-                   
                 </div>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -595,9 +473,7 @@
                 </div>
             </div>
             <hr>
-            <!-- القسم الأوسط (الروابط) -->
             <div class="footer-middle">
-                <!-- العمود الأول -->
                 <div class="footer-col">
                     <h2>Company</h2>
                     <ul>
@@ -608,18 +484,16 @@
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-                <!-- العمود الثاني -->
                 <div class="footer-col">
                     <h2>Menu</h2>
                     <ul>
-                        <li><a href="#">Pizza</a></li>
-                        <li><a href="#">Pasta</a></li>
-                        <li><a href="#">Sides</a></li>
-                        <li><a href="#">Beverages</a></li>
-                        <li><a href="#">Desserts</a></li>
+                        <li><a href="menu.html">Pizza</a></li>
+                        <li><a href="menu.html">Pasta</a></li>
+                        <li><a href="menu.html">Sides</a></li>
+                        <li><a href="menu.html">Beverages</a></li>
+                        <li><a href="menu.html">Desserts</a></li>
                     </ul>
                 </div>
-                <!-- العمود الثالث -->
                 <div class="footer-col">
                     <h2>Services</h2>
                     <ul>
@@ -630,7 +504,6 @@
                         <li><a href="#">Bulk Orders</a></li>
                     </ul>
                 </div>
-                <!-- العمود الرابع -->
                 <div class="footer-col contact-col">
                     <h2>Contact Us</h2>
                     <p class="contact-desc">Feel free to call us in working hours Mon - fri {8:00 - 16.00}. Our team will be happy to help answer your queries</p>
@@ -639,7 +512,6 @@
                 </div>
             </div>
 
-            <!-- القسم السفلي (حقوق النشر والروابط القانونية) -->
             <div class="footer-bottom">
                 <div class="copyright">
                     Copyright &copy; 2025 Pizzaro <span class="divider">|</span> Design by Tokotema
@@ -650,9 +522,11 @@
                     <a href="#">Cookie Policy</a>
                 </div>
             </div>
-
         </div>
     </footer>
+
+    <script src="script.js"></script>
     <script src="assets/JS/main.js"></script>
+    <script src="assets/JS/menu.js"></script>
 </body>
 </html>

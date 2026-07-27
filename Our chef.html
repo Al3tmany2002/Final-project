@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="assets/CSS/all.min.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/Delivery.css">
+    <link rel="stylesheet" href="assets/CSS/menu.css">
     <link rel="stylesheet " href="assets/CSS/our-Chef.css"></link>
 </head>
 <body>
 
       
     <!-- Start Section navbar  -->
-    <nav class="header">
+    <header class="header">
         <nav class="navbar">
             <!-- اللوجو -->
             <div class="logo">
-         
-                    <img src="assets/imgs/Logo.png" alt="logo-header">
-               
+
+                <img src="assets/imgs/Logo.png" alt="logo-header">
+
             </div>
 
             <!-- زر القائمة للموبايل -->
@@ -34,18 +35,18 @@
             <!-- روابط التنقل -->
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <!-- قائمة منسدلة -->
                 <li class="dropdown">
-                    <a href="#">Pages <i class="fas fa-chevron-down"></i></a>           
+                    <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="Delivery.html">Delivery</a></li>
                         <li><a href="Our chef.html">Our Chef</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="#">Events</a></li>
-                         <li><a href="helper-center.html">Hlper Center</a></li>
-                       <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="helper-center.html">Help Center</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
                     </ul>
                 </li>
                 <li><a href="contact us.html">Contact Us</a></li>
@@ -54,9 +55,24 @@
             </ul>
 
             <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
-            <a href="#menu-section" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+            <a href="#" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+
+            <div class="cart-box">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</div>
+<button id="darkMode">
+    🌙
+</button>
         </nav>
-    </nav>
+    </header>
+<div id="popup">
+    <button id="prev-img">&#10094;</button>
+
+    <img id="popup-img">
+
+    <button id="next-img">&#10095;</button>
+</div>
         <!-- قسم رأس الصفحة -->
     <section class="page-header hidden-section">
         <div class="container-header">
@@ -118,9 +134,10 @@
                 <div>
                     <img src="assets/imgs/chef/image-48.jpg" alt="Head Chef">
                     <div class="span-chef span-1">
-                        <h4>Head Chef</h4>
+                       
                     </div>
                     <div class="caption-our-chef">
+                         <h4>Head Chef</h4>
                     <h3>
                     Marco Bellini
                     </h3>
@@ -138,13 +155,16 @@
                 <!-- item-2  -->
                   <div>
                     <img src="assets/imgs/chef/image-50.jpg" alt="Head Chef">
-                    <div class="span-chef span-2">
-                        <h4>Pizza Specialist</h4>
-                    </div>
+                   
                     <div class="caption-our-chef">
+                         <div class="span-chef span-2">
+                        
+                    </div>
+                     <h4>Pizza Specialist</h4>
                     <h3>
                    Sofia Romano
                     </h3>
+                   
                          <p>
                             In ut at hendrerit ultrices egestas aliquam. Diam vitae pharetra sit lorem molestie gravida pellentesque.
                         </p>
@@ -161,9 +181,10 @@
                   <div>
                     <img src="assets/imgs/chef/image-53.jpg" alt="Head Chef">
                     <div class="span-chef span-3">
-                        <h4>Flavor Master</h4>
+                       
                     </div>
                     <div class="caption-our-chef">
+                         <h4>Flavor Master</h4>
                     <h3>
                     Daniel Ventura
                     </h3>
@@ -181,9 +202,10 @@
                  <div>
                     <img src="assets/imgs/chef/image-49.jpg" alt="Head Chef">
                     <div class="span-chef span-4">
-                        <h4>Dough Artisan</h4>
+                       
                     </div>
                     <div class="caption-our-chef">
+                         <h4>Dough Artisan</h4>
                     <h3>
                    Lucia Moretti
                     </h3>
@@ -204,9 +226,10 @@
                   <div>
                     <img src="assets/imgs/chef/image-51.jpg" alt="Head Chef">
                     <div class="span-chef span-5">
-                        <h4>Supervisor</h4>
+                       
                     </div>
                     <div class="caption-our-chef">
+                         <h4>Supervisor</h4>
                     <h3>
                    Adrian Solano
                     </h3>
@@ -224,9 +247,10 @@
                   <div>
                     <img src="assets/imgs/chef/image-54.jpg" alt="Head Chef">
                     <div class="span-chef span-6">
-                        <h4>Kitchen Coordinator</h4>
+                        
                     </div>
                     <div class="caption-our-chef">
+                        <h4>Kitchen Coordinator</h4>
                     <h3>
                    Elena Marcello
                     </h3>

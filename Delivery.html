@@ -8,19 +8,20 @@
      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/all.min.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/menu.css">
     <link rel="stylesheet" href="assets/CSS/Delivery.css">
 </head>
 <body>
 
       
-    <!-- Start Section navbar  -->
-    <nav class="header">
+   <!-- Start Section navbar  -->
+    <header class="header">
         <nav class="navbar">
             <!-- اللوجو -->
             <div class="logo">
-         
-                    <img src="assets/imgs/Logo.png" alt="logo-header">
-               
+
+                <img src="assets/imgs/Logo.png" alt="logo-header">
+
             </div>
 
             <!-- زر القائمة للموبايل -->
@@ -33,8 +34,8 @@
             <!-- روابط التنقل -->
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <!-- قائمة منسدلة -->
                 <li class="dropdown">
                     <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
@@ -42,9 +43,9 @@
                         <li><a href="Delivery.html">Delivery</a></li>
                         <li><a href="Our chef.html">Our Chef</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="event.html">Events</a></li>
                         <li><a href="helper-center.html">Help Center</a></li>
-                       <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
                     </ul>
                 </li>
                 <li><a href="contact us.html">Contact Us</a></li>
@@ -53,9 +54,24 @@
             </ul>
 
             <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
-            <a href="#menu-section" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+            <a href="#" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+
+            <div class="cart-box">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</div>
+<button id="darkMode">
+    🌙
+</button>
         </nav>
-    </nav>
+    </header>
+<div id="popup">
+    <button id="prev-img">&#10094;</button>
+
+    <img id="popup-img">
+
+    <button id="next-img">&#10095;</button>
+</div>
         <!-- قسم رأس الصفحة -->
     <section class="page-header hidden-section">
         <div class="container-header">
@@ -102,7 +118,7 @@
                         <div class="price-box">
                             <span class="price">LE 175</span>
                         </div>
-                        <button class="add-btn" onclick="addToCart('Margherita Supreme',175)">+ Add</button>
+                        <button class="add-btn-delivery" onclick="addToCart('Margherita Supreme',175)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -120,7 +136,7 @@
                         <div class="price-box">
                             <span class="price">LE 220</span>
                         </div>
-                        <button class="add-btn"  onclick="addToCart('Artisanal Pepperoni',220)">+ Add</button>
+                        <button class="add-btn-delivery"  onclick="addToCart('Artisanal Pepperoni',220)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -138,7 +154,7 @@
                         <div class="price-box">
                             <span class="price">LE 180</span>
                         </div>
-                        <button class="add-btn" onclick="addToCart('Truffle Wild Mushroom',180)">+ Add</button>
+                        <button class="add-btn-delivery" onclick="addToCart('Truffle Wild Mushroom',180)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -157,7 +173,7 @@
                         <div class="price-box">
                             <span class="price">LE 120</span>
                         </div>
-                        <button class="add-btn" onclick="addToCart('Spicy Diavola',120)">+ Add</button>
+                        <button class="add-btn-delivery" onclick="addToCart('Spicy Diavola',120)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -174,7 +190,7 @@
                         <div class="price-box">
                             <span class="price">LE 160</span>
                         </div>
-                        <button class="add-btn" onclick="addToCart('Quattro Formaggi',160)">+ Add</button>
+                        <button class="add-btn-delivery" onclick="addToCart('Quattro Formaggi',160)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -190,7 +206,7 @@
                         <div class="price-box">
                             <span class="price">LE 150</span>
                         </div>
-                        <button class="add-btn" onclick="addToCart('Smoky BBQ Chicken',150)">+ Add</button>
+                        <button class="add-btn-delivery" onclick="addToCart('Smoky BBQ Chicken',150)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -207,7 +223,7 @@
                         <div class="price-box">
                             <span class="price">LE 200</span>
                         </div>
-                        <button class="add-btn" onclick="addToCart('Prosciutto & Arugula',200)">+ Add</button>
+                        <button class="add-btn-delivery" onclick="addToCart('Prosciutto & Arugula',200)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -224,7 +240,7 @@
                         <div class="price-box">
                             <span class="price">LE 175</span>
                         </div>
-                        <button class="add-btn" onclick="addToCart('Garden Mediterranean',175)">+ Add</button>
+                        <button class="add-btn-delivery" onclick="addToCart('Garden Mediterranean',175)">+ Add</button>
                     </div>
                 </div>
             </div>
@@ -245,7 +261,7 @@
         <div class="container-services">
             
             <div class="section-header">
-                <span class="subtitle-services">Fast Delivery</span>
+                
                 <h2>Fresh Pizza<br>Delivered Anytime</h2>
                 <p>Ut pulvinar egestas venenatis quis. Nunc blandit pretium morbi<br>enim faucibus quisque scelerisque laoreet.</p>
             </div>

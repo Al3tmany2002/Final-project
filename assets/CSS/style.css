@@ -8,41 +8,41 @@
 }
 
 body {
-     background-color: #f4f0eb; /* لون الخلفية الكريمي المائل للأبيض */   
+     background-color: #f4f0eb;   
 }
 
 :root {
     /* =========================================
-       1. Colors (الألوان)
+       1. Colors 
        ========================================= */
     
-    /* الألوان الأساسية (Primary Colors) */
-    --pz-primary: #e85d22;           /* البرتقالي الأساسي (اللوجو، الأزرار، التميزات) */
-    --pz-primary-hover: #d14a16;     /* برتقالي داكن (للهوفر - Hover) */
-    --pz-secondary: #ffb700;         /* أصفر/ذهبي (لأيقونات التقييم والنجوم) */
+    /*(Primary Colors) */
+    --pz-primary: #e85d22;           
+    --pz-primary-hover: #d14a16;     
+    --pz-secondary: #ffb700;         
     
-    /* ألوان الخلفيات (Background Colors) */
-    --pz-bg-body: #f4f0eb;           /* الكريمي/الأوف وايت (خلفية الموقع الرئيسية) */
-    --pz-bg-footer: #272F16;         /* الزيتي/الأخضر الداكن (خلفية الفوتر) */
-    --pz-bg-white: #ffffff;          /* أبيض نقي (لخلفيات الكروت والقوائم) */
+    /*(Background Colors) */
+    --pz-bg-body: #f4f0eb;           
+    --pz-bg-footer: #272F16;        
+    --pz-bg-white: #ffffff;          
     
-    /* ألوان النصوص (Text Colors) */
-    --pz-text-heading: #111111;      /* أسود داكن (للعناوين H1, H2, H3) */
-    --pz-text-body: #555555;         /* رمادي داكن (للنصوص العادية والفقرات) */
-    --pz-text-footer: #a4a89d;       /* رمادي فاتح (لنصوص وروابط الفوتر) */
-    --pz-text-white: #ffffff;        /* أبيض (للنصوص داخل الأزرار البرتقالية) */
+    /*(Text Colors) */
+    --pz-text-heading: #111111;      
+    --pz-text-body: #555555;         
+    --pz-text-footer: #a4a89d;       
+    --pz-text-white: #ffffff;        
     
-    /* ألوان الحدود والفواصل (Border Colors) */
+   
     --pz-border-light: rgba(0, 0, 0, 0.08);   
     --pz-border-dark: rgba(255, 255, 255, 0.1);
 
     /* =========================================
-       2. Typography (الخطوط)
+       2. Typography 
        ========================================= */
     --pz-font-primary: 'Nunito', sans-serif;
-    --pz-font-accent: 'Pacifico', cursive; /* للكلمات مثل "Fresh Woodfired Pizza" */
+    --pz-font-accent: 'Pacifico', cursive; 
 
-    /* أوزان الخطوط (Font Weights) */
+    /* (Font Weights) */
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
@@ -50,22 +50,23 @@ body {
     --fw-black: 900;
 
     /* =========================================
-       3. Transitions & Shadows (الانتقالات والظلال)
+       3. Transitions & Shadows 
        ========================================= */
     
-    /* الانتقالات الناعمة (Transitions) */
+    /*  (Transitions) */
     --transition-fast: all 0.2s ease-in-out;
     --transition-normal: all 0.3s ease-in-out;
     --transition-slow: all 0.5s ease-in-out;
 
-    /* منحنى الحركة (Bezier Curves) لجعل الحركات طبيعية ومرنة مثل Elementor */
+    
     --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
-    /* ظلال العناصر (Box Shadows) */
+    /* (Box Shadows) */
     --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); /* ظل برتقالي للأزرار */
+    --shadow-hover: 0 15px 30px rgba(232, 93, 34, 0.2); 
 }
+
 
 
 .container {
@@ -78,7 +79,6 @@ hr
 {
     opacity: 0.1;
 }
-/* إعدادات عامة */
 /* //
 // */
 /* section navbar  */
@@ -99,7 +99,7 @@ hr
     padding: 20px;
 }
 
-/* تنسيق اللوجو */
+
 .logo {
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@ hr
     letter-spacing: 0.5px;
 }
 
-/* تنسيق الروابط */
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -134,16 +134,16 @@ hr
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #e85d22; /* اللون البرتقالي */
+    color: #e85d22; 
 }
 
-/* أيقونة السهم في القائمة */
+
 .nav-links li a i {
     font-size: 11px;
     margin-top: 2px;
 }
 
-/* تنسيق القائمة المنسدلة (Dropdown) */
+
 .dropdown {
     position: relative;
 }
@@ -158,14 +158,14 @@ hr
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     padding: 10px 0;
-    /* لإخفاء القائمة بلمسة جمالية */
+    
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
 
-/* إظهار القائمة عند الوقوف عليها بالماوس */
+
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -208,7 +208,7 @@ hr
     display: none;
 }
 
-/* زر الهامبرجر (للموبايل) */
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -231,7 +231,7 @@ hr
 
 .footer {
     background-color: var(--pz-bg-footer);
-    color: var(--pz-text-footer);                     /*  لوعايز تستدعي اي حاجه ف الروت الي فوق تكتبي var(--اسم الحاجه) */
+    color: var(--pz-text-footer);                   
     padding: 60px 0 20px;
 }
 
@@ -389,7 +389,7 @@ hr
         margin-top: 15px;
     }
 
-    /* تحويل الروابط إلى قائمة عمودية مخفية تظهر بالضغط */
+   
     .nav-links {
         position: absolute;
         top: 75px;
@@ -403,7 +403,7 @@ hr
         transition: 0.4s ease-in-out;
     }
 
-    /* كلاس active الذي يتم إضافته بالجافاسكربت لإظهار القائمة */
+    
     .nav-links.active {
         left: 0;
     }
@@ -412,7 +412,7 @@ hr
         margin: 10px 0;
     }
 
-    /* تعديل القائمة المنسدلة في الموبايل */
+    
     .dropdown-menu {
         position: static;
         box-shadow: none;
@@ -424,7 +424,7 @@ hr
         text-align: center;
     }
 
-    /* يمكنك استخدام الجافاسكريبت لفتحها، لكن هنا تظهر تلقائياً عند النقر لتبسيط الكود */
+   
     .dropdown:hover .dropdown-menu {
         display: block;
     }
@@ -452,8 +452,7 @@ hr
   Home style
    ========================================= */
 
-/* إعدادات عامة وتثبيت الألوان والخلفية */
-/* إعدادات عامة وتثبيت الألوان والخلفية */
+
 * {
     margin: 0;
     padding: 0;
@@ -481,7 +480,7 @@ body {
     min-height: 100vh;
 }
 
-/* حاوية الـ Hero مقسمة لـ 3 أعمدة (نصوص، شيف، تقييم) */
+
 .hero-container {
     display: flex;
     justify-content: space-between;
@@ -492,7 +491,7 @@ body {
     z-index: 2;
 }
 
-/* الجزء الأيسر: النصوص والزرار */
+
 .hero-content {
     flex: 1;
     max-width: 480px;
@@ -544,7 +543,7 @@ body {
     box-shadow: 0 8px 25px rgba(229, 152, 66, 0.6);
 }
 
-/* الجزء الأوسط: الشيف في النص تماماً */
+
 .chef-image {
     flex: 1;
     text-align: center;
@@ -564,7 +563,7 @@ body {
     margin-left: auto;
     animation: floatChef 4s ease-in-out infinite;
 }
-/* الجزء الأيمن: التقييم */
+
 .hero-right {
     flex: 1;
     display: flex;
@@ -600,7 +599,7 @@ body {
     font-weight: 500;
 }
 
-/* كارت البيتزا العائم (المودرن الغامق) */
+
 .pizza-card-float {
     position: absolute;
     right: 8%;
@@ -662,12 +661,10 @@ body {
     transform: scale(1.1);
 }
 
-/* صورة البيتزا الكبيرة في الخلفية تحت */
-/* الحاوية ثابتة في المنتصف تماماً بين القسمين بدون أي حركة */
-/* الحاوية متمركزة في المنتصف تماماً بين القسمين */
+
 .hero-big-pizza {
     position: absolute;
-    bottom: -330px; /* زيادة مسافة النزول للأسفل لتناسب الحجم الضخْم الجديد */
+    bottom: -330px; 
     left: 50%;
     transform: translateX(-50%);
     width: auto;
@@ -675,10 +672,10 @@ body {
     z-index: 99;
 }
 
-/* تكبير البيتزا لتصبح ضخمة وموزعة على القسمين مع استمرار الدوران */
+
 .hero-big-pizza img {
-    width: 650px;  /* حجم أكبر بكثير ومميز */
-    height: 650px; /* نفس الحفاظ على التناسق الدائري 100% */
+    width: 650px;  
+    height: 650px; 
     max-width: none;
     object-fit: cover;
     border-radius: 50%;
@@ -686,11 +683,11 @@ body {
     border: none !important;
     box-shadow: none !important;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-    animation: rotatePizza 25s linear infinite; /* البيتزا وحدها تدور بحرية */
+    animation: rotatePizza 25s linear infinite; 
 }
 
 
-/* إعدادات القسم الرئيسي */
+
 .categories-section {
     background-color: #2b3828;
     padding: 60px 8%;
@@ -698,7 +695,7 @@ body {
     color: #ffffff;
 }
 
-/* رأس القسم (العنوان والزر) */
+
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -731,14 +728,14 @@ body {
     box-shadow: 0 5px 15px rgba(230, 92, 36, 0.4);
 }
 
-/* حاوية المحتوى الأساسية (توزيع شبكي أو مرن) */
+
 .categories-container {
     display: flex;
     gap: 30px;
     align-items: stretch;
 }
 
-/* قائمة الفئات (اليسار) */
+
 .categories-list {
     flex: 1.3;
     display: flex;
@@ -746,7 +743,6 @@ body {
     gap: 15px;
 }
 
-/* بطاقة الفئة الفردية */
 .category-card {
     background-color: #384734;
     padding: 20px 25px;
@@ -764,7 +760,7 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* أيقونة الفئة */
+
 .category-icon img {
     width: 45px;
     height: 45px;
@@ -777,7 +773,7 @@ body {
     transform: rotate(15deg) scale(1.1);
 }
 
-/* معلومات الفئة (النصوص) */
+
 .category-info {
     flex: 1;
     margin-left: 20px;
@@ -796,14 +792,14 @@ body {
     color: #b0c2ac;
 }
 
-/* عدد العناصر (Items) */
+
 .item-count {
     color: #f39c12;
     font-weight: bold;
     font-size: 0.9rem;
 }
 
-/* حاوية الصور في الجانب الأيمن */
+
 .category-images {
     flex: 1;
     display: flex;
@@ -844,14 +840,14 @@ body {
 
 
 
-/* إعدادات القسم الرئيسي */
+
 .favorites-section {
     background-color: #fcf9f5;
     padding: 80px 8%;
     font-family: 'Arial', sans-serif;
 }
 
-/* رأس القسم (العنوان والوصف) */
+
 .favorites-header {
     display: flex;
     justify-content: space-between;
@@ -878,14 +874,14 @@ body {
     margin: 0;
 }
 
-/* شبكة المنتجات (Grid 3 أعمدة) */
+
 .favorites-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* تصميم الكارد الواحد */
+
 .product-card {
     background-color: transparent;
     display: flex;
@@ -897,7 +893,7 @@ body {
     transform: translateY(-8px);
 }
 
-/* صورة المنتج */
+
 .product-image {
     width: 100%;
     height: 230px;
@@ -919,7 +915,7 @@ body {
     transform: scale(1.1);
 }
 
-/* محتوى الكارد (العنوان، السعر، الوصف، الزر) */
+
 .product-content {
     display: flex;
     flex-direction: column;
@@ -953,7 +949,7 @@ body {
     margin: 0 0 20px 0;
 }
 
-/* زر الطلب (Order Now) */
+
 .order-btn {
     width: 100%;
     background-color: transparent;
@@ -977,7 +973,7 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* التجاوب مع الشاشات الصغيرة (Responsive) */
+
 @media (max-width: 1024px) {
     .favorites-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -995,7 +991,7 @@ body {
     }
 }
 
-/* إعدادات القسم الرئيسي بخلفية برتقالية مميزة */
+
 .delivery-section {
     background-color: #e65c24;
     padding: 80px 8%;
@@ -1004,7 +1000,7 @@ body {
     text-align: center;
 }
 
-/* تنسيق النصوص في أعلى القسم */
+
 .delivery-header {
     margin-bottom: 50px;
 }
@@ -1032,7 +1028,7 @@ body {
     margin: 0;
 }
 
-/* شبكة المميزات (3 أعمدة متساوية) */
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1041,7 +1037,7 @@ body {
     margin: 0 auto;
 }
 
-/* تصميم البطاقة الواحدة */
+
 .feature-card {
     background-color: rgba(255, 255, 255, 0.12);
     border-radius: 20px;
@@ -1060,7 +1056,7 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* أيقونة الميزة الدائرية */
+/
 .feature-icon {
     width: 80px;
     height: 80px;
@@ -1084,7 +1080,7 @@ body {
     object-fit: contain;
 }
 
-/* عنوان الميزة داخل البطاقة */
+
 .feature-card h3 {
     font-size: 1.25rem;
     font-weight: bold;
@@ -1093,7 +1089,7 @@ body {
     margin: 0;
 }
 
-/* التجاوب مع الشاشات الصغيرة (Responsive) */
+
 @media (max-width: 900px) {
     .features-grid {
         grid-template-columns: 1fr;
@@ -1105,14 +1101,14 @@ body {
     }
 }
 
-/* إعدادات القسم الرئيسي */
+
 .recommended-section {
     background-color: #fcf9f5;
     padding: 80px 5%;
     font-family: 'Arial', sans-serif;
 }
 
-/* رأس القسم */
+
 .recommended-header {
     display: flex;
     justify-content: space-between;
@@ -1147,7 +1143,7 @@ body {
     margin: 0;
 }
 
-/* حاوية المحتوى الكلي (تقسيم شبكي بين الأطباق والبانر) */
+
 .recommended-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -1155,14 +1151,14 @@ body {
     align-items: start;
 }
 
-/* شبكة الأطباق الداخلية (3 أعمدة) */
+
 .dishes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* تصميم كارد الطبق الواحد */
+
 .dish-card {
     background: transparent;
     cursor: pointer;
@@ -1195,7 +1191,7 @@ body {
     transform: scale(1.08);
 }
 
-/* شارة السعر العلوية داخل صورة الطبق */
+
 .dish-price {
     position: absolute;
     top: 12px;
@@ -1216,9 +1212,9 @@ body {
     margin: 0;
 }
 
-/* تصميم البانر الترويجي الكبير */
+
 .promo-banner {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('promo-pizza.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/e1/69/f6/e169f67b48520e70bd8c4a27541b481b.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -1272,7 +1268,7 @@ body {
     box-shadow: 0 5px 15px rgba(207, 79, 31, 0.4);
 }
 
-/* التجاوب مع الشاشات المختلفة */
+
 @media (max-width: 1200px) {
     .recommended-container {
         grid-template-columns: 1fr;
@@ -1299,7 +1295,7 @@ body {
     }
 }
 
-/* إعدادات القسم الرئيسي */
+
 .why-choose-section {
     background-color: #f6e6d2;
     padding: 80px 8%;
@@ -1310,7 +1306,7 @@ body {
     gap: 50px;
 }
 
-/* الجانب الأيسر: الصور المتداخلة */
+
 .why-choose-images {
     flex: 1;
     position: relative;
@@ -1320,7 +1316,7 @@ body {
     min-height: 450px;
 }
 
-/* صورة الشيف الكبيرة */
+
 .chef-large-img {
     width: 320px;
     height: 400px;
@@ -1341,7 +1337,7 @@ body {
     display: block;
 }
 
-/* صورة البيتزا العائمة المتداخلة */
+
 .pizza-small-img {
     width: 220px;
     height: 220px;
@@ -1362,7 +1358,7 @@ body {
     display: block;
 }
 
-/* الجانب الأيمن: النصوص والمميزات */
+
 .why-choose-content {
     flex: 1.1;
 }
@@ -1390,7 +1386,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* قائمة المميزات */
+
 .features-list {
     list-style: none;
     padding: 0;
@@ -1414,7 +1410,7 @@ body {
     transform: translateX(6px);
 }
 
-/* أيقونة الصح البرتقالية */
+
 .check-icon {
     width: 24px;
     height: 24px;
@@ -1427,7 +1423,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* زر الاستكشاف (Discover More) */
+
 .discover-btn {
     background-color: #e65c24;
     color: #ffffff;
@@ -1447,7 +1443,7 @@ body {
     box-shadow: 0 5px 15px rgba(230, 92, 36, 0.4);
 }
 
-/* التجاوب مع الشاشات المختلفة (Responsive) */
+
 @media (max-width: 992px) {
     .why-choose-section {
         flex-direction: column;
@@ -1469,14 +1465,14 @@ body {
         justify-content: center;
     }
 }
-/* --- إعدادات قسم آراء العملاء --- */
+
 .customer-voices-section {
     background-color: #fcf9f5;
     padding: 80px 8%;
     font-family: 'Arial', sans-serif;
 }
 
-/* رأس القسم (العنوان والوصف الجانبي) */
+
 .voices-header {
     display: flex;
     justify-content: space-between;
@@ -1511,14 +1507,14 @@ body {
     margin: 0;
 }
 
-/* شبكة البطاقات (3 أعمدة × صفين) */
+
 .voices-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* تنسيق البطاقة الواحدة */
+
 .voice-card {
     background-color: #f2ede4;
     border-radius: 20px;
@@ -1535,7 +1531,7 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* الجزء العلوي من البطاقة (أيقونة التنصيص، العنوان، والتقييم) */
+
 .card-top {
     display: flex;
     align-items: center;
@@ -1573,7 +1569,7 @@ body {
     font-size: 1rem;
 }
 
-/* نص التقييم داخل البطاقة */
+
 .review-text {
     color: #555;
     font-size: 0.9rem;
@@ -1581,7 +1577,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* معلومات العميل (الصورة، الاسم، والمنطقة) */
+
 .customer-info {
     display: flex;
     align-items: center;
@@ -1620,7 +1616,7 @@ body {
     color: #777;
 }
 
-/* --- التجاوب مع الشاشات المختلفة (Responsive) --- */
+
 @media (max-width: 1024px) {
     .voices-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1643,13 +1639,13 @@ body {
     }
 }
 
-/* --- إعدادات قسم الواجهة الرئيسية (Hero Section) بكلاسات جديدة --- */
+
 .pizzaro-hero-section {
     position: relative;
     width: 100%;
     height: 100vh;
     min-height: 550px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-pizza-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.pinimg.com/1200x/df/37/1b/df371b99946d2c910702e32c275bc56a.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1724,7 +1720,7 @@ body {
     }
 }
 
-/* --- حركات الأنيميشن المضافة (Keyframes) --- */
+
 @keyframes floatChef {
     0%, 100% {
         transform: translateY(0);
@@ -1801,7 +1797,7 @@ body {
 
 
 
-@media (max-width: 480px) {      /* للموبايل  */
+@media (max-width: 480px) {      
     .footer-middle {
         grid-template-columns: 1fr;
         text-align: center;
