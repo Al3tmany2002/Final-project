@@ -9,8 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/all.min.css">
     <link rel="stylesheet" href="assets/CSS/menu.css">
-    <link rel="stylesheet" href="assets/CSS/Delivery.css">
-    
 </head>
 
 <body>
@@ -33,34 +31,36 @@
 
             <!-- روابط التنقل -->
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Menu</a></li>
                 <!-- قائمة منسدلة -->
                 <li class="dropdown">
                     <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="Delivery.html">Delivery</a></li>
-                        <li><a href="Our chef.html">Our Chef</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="event.html">Events</a></li>
-                        <li><a href="helper-center.html">Help Center</a></li>
-                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Our Chef</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">404</a></li>
                     </ul>
                 </li>
-                <li><a href="contact us.html">Contact Us</a></li>
+                <li><a href="#">Contact Us</a></li>
                 <!-- الزر داخل القائمة في وضع الموبايل -->
                 <li class="mobile-only"><a href="#" class="btn-pizza">GET YOUR PIZZA</a></li>
             </ul>
 
             <!-- الزر الأساسي (يختفي في الموبايل ليظهر داخل القائمة) -->
-            <a href="login.html" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
+            <a href="#" class="btn-pizza desktop-only">GET YOUR PIZZA</a>
 
-            <div class="cart-box">
+            <div class="cart-box" id="cart-box">
     <i class="fa-solid fa-cart-shopping"></i>
     <span id="cart-count">0</span>
 </div>
-
+<button id="darkMode">
+    🌙
+</button>
         </nav>
     </header>
 <div id="popup">
@@ -71,7 +71,11 @@
     <button id="next-img">&#10095;</button>
 </div>
 
-  <section class="page-header hidden-section">
+
+
+
+
+ <section class="page-header hidden-section">
         <div class="container-header">
             
             <!-- القسم الأيسر: العنوان والنص -->
@@ -89,7 +93,6 @@
 
         </div>
     </section>
-
 
 
 
@@ -122,8 +125,6 @@
 
 
 
-
- 
 
 
 
@@ -222,7 +223,7 @@
                             <p>Fresh mozzarella with tomato sauce.</p>
 
                             <div class="bottom">
-                                <span class="price">$12.99</span>
+                                <span class="price">250 LE</span>
                                 <button class="add-btn">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
@@ -238,7 +239,7 @@
                             <p>Loaded with pepperoni and cheese.</p>
 
                             <div class="bottom">
-                                <span class="price">$14.99</span>
+                                <span class="price">300 LE</span>
                                 <button class="add-btn">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
@@ -254,7 +255,7 @@
                             <p>Grilled chicken with BBQ sauce.</p>
 
                             <div class="bottom">
-                                <span class="price">$15.99</span>
+                                <span class="price">320 LE</span>
                                 <button class="add-btn">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
@@ -270,7 +271,7 @@
                             <p>Fresh vegetables with mozzarella.</p>
 
                             <div class="bottom">
-                                <span class="price">$13.99</span>
+                                <span class="price">290 LE</span>
                                 <button class="add-btn">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
@@ -286,7 +287,7 @@
                             <p>Beef, sausage and pepperoni.</p>
 
                             <div class="bottom">
-                                <span class="price">$18.99</span>
+                                <span class="price">300 LE</span>
                                 <button class="add-btn">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
@@ -302,7 +303,7 @@
                             <p>Classic cheese pizza.</p>
 
                             <div class="bottom">
-                                <span class="price">$10.99</span>
+                                <span class="price">280 LE</span>
                                 <button class="add-btn">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
@@ -345,7 +346,7 @@
                 <img src="https://iili.io/CeMThSj.jpg" alt="">
                 <h3>Hawaiian Pizza</h3>
                 <p>Ham, pineapple, mozzarella cheese.</p>
-                <span>$9.99</span>
+                <span>210 LE</span>
                <div>
                 <button class="order-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -359,7 +360,7 @@
                 <h3>Supreme Pizza </h3>
                 <p>Pepperoni, sausage, onions, mushrooms, bell peppers, olives</p>
 
-                <span>$4.99</span>
+                <span>280 LE</span>
               <div>
                 <button class="order-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -372,7 +373,7 @@
                 <img src="https://iili.io/CeMGRXs.jpg" alt="">
                 <h3>Quattro Formaggi</h3>
                 <p>Mozzarella, Parmesan, Gorgonzola, Cheddar.</p>
-                <span>$8.99</span>
+                <span>260 LE</span>
              <div>
                 <button class="order-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -385,7 +386,7 @@
                 <img src="https://iili.io/CeMlmfp.jpg" alt="">
                 <h3>Seafood Pizza</h3>
                 <p>Shrimp, calamari, mozzarella, garlic sauce.</p>
-                <span>$6.99</span>
+                <span>318 LE</span>
              <div>
                 <button class="order-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -398,7 +399,7 @@
                 <img src="https://iili.io/CeMENRt.jpg" alt="">
                 <h3>Mushroom Pizza</h3>
                 <p>Fresh mushrooms, mozzarella, herbs.</p>
-                <span>$12.99</span>
+                <span>195 LE</span>
               <div>
                 <button class="order-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -411,7 +412,7 @@
                 <img src="https://iili.io/CeMX3aR.jpg" alt="">
                 <h3>Buffalo Chicken Pizza</h3>
                 <p>Spicy buffalo chicken, mozzarella, ranch dressing.</p>
-                <span>$22.99</span>
+                <span>200 LE </span>
                 <div>
                 <button class="order-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -628,8 +629,6 @@
         </div>
     </footer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
-   
     <script src="assets/JS/menu.js"></script>
 </body>
 
